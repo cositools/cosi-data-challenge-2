@@ -1,3 +1,3 @@
-# Cosi Data Challenge 2
+# COSI Data Challenge 2 (2024)
 
-Welcome to the second COSI data challenge!
+Welcome to the second COSI data challenge! These data challenges are released on a yearly basis in preparation for the launch of the COSI Small Explorer mission ([Tomsick et al. 2019](https://ui.adsabs.harvard.edu/abs/2019BAAS...51g..98T/abstract)) in 2027. The main goals of the data challenges are to facilitate the development of the COSI data pipeline and analysis tools, and to provide resources to the astrophysics community to become familiar with COSI data. The first data challenge was released in March 2023, and it can be found [here](https://github.com/cositools/cosi-data-challenge-1). 
