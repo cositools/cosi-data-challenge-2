@@ -21,6 +21,16 @@ In general, observations in the MeV band are hindered by high backgrounds (both 
 For analyzing data in DC2, the backgrounds are modeled using the actual backgrounds themselves. Of course this is the ideal case, where the backgrounds are perfectly known, which is not realistic. In future data challenges we will be developing tools for estimating backgrounds when they are not perfectly known, as will be the case for the actual observations.    
 
 ## Data Challanges
+We have created example jupyter notebooks demonstrating all of the tools that will be needed to complete this year's data challenges. They are available as part of the cosipy release, and listed below: <br /> 
+
+Example 1: GRB localization <br />
+Example 2: GRB spectral fit <br />
+Example 3: Crab spectral fit <br />
+Example 4: 511 spectral fit <br />
+Example 5: Crab imaging <br />
+Example 6: 511 imaging <br />
+
+As a very first step, try working through some of the example notebooks. Specific challenges for the different science topics are described below. You can start with whatever topic you are most interested in. Each challenge will refer you to a specific example notebook that will demonstrate the basic tools needed to complete the respective challenge. If you have completed the main challenges and are interested in further challenges, see the **Extra Challenges** section at the bottom of this page. 
 
 ## GRBs
 Included are:
@@ -165,4 +175,7 @@ The .source files are copied from a template and the names, coordinates, and flu
 
 ## Galactic 
 ## Extragalactic
+## Extra Challenges
+### Extended 
+### Advanced
 
