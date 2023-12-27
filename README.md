@@ -7,6 +7,8 @@ The only software requirement for DC2 is [cosipy](https://github.com/cositools/c
 
 The input models and challenges for DC2 were provided by the COSI science team. There are challenges for the different groups: Nucleosynthesis, Positron, GRB, Galactic, and Extragalactic. These are described in detail in the **Data Challenges** section below. We have created example jupyter notebooks demonstrating the basic tools that you'll need to complete each challenge. In addition to the main data challenges, we have given some extra challenges, which entails developing new functionality using the available tools in cosipy, e.g. methods for calculating light curves, SEDs, etc. Finally, we have also given some advanced challenges, which requires developing new tools. 
 
+In summary, to get started with DC2, install cosipy, familiarize yourself with the (simulated) data products, and then start working through the data challenges, as described below. 
+
 ## Getting Help
 Please submit a New Issue in the [cosipy](https://github.com/cositools/cosipy) git repository if you have issues with the code. If you have general feedback, or need further assistance, please reach out to the COSI Data Challenge team lead, Chris Karwin ([christopher.m.karwin@nasa.gov](mailto:christopher.m.karwin@nasa.gov)), the cosipy implementation lead, Israel Martinez-Castellanos ([israel.martinezcastellanos@nasa.gov](israel.martinezcastellanos@nasa.gov)), and/or the pipeline development lead Carolyn Kierans ([carolyn.a.kierans@nasa.gov](carolyn.a.kierans@nasa.gov)).
 
@@ -14,9 +16,9 @@ Please submit a New Issue in the [cosipy](https://github.com/cositools/cosipy) g
 This year's data challenge is based on 3 months of exposure time, for an equatorial orbit at an altitude of 550 km, with a zenith pointing. Details of the simulations, simulated data, and information for accessing the data products can be found in the [data-products](https://github.com/cositools/cosi-data-challenge-2/tree/main/data-products) directory. 
 
 ## Backgrounds
-In general, observations in the MeV band are hindered by high backgrounds (both instrumental and astrophysical). In order to ensure that COSI accomplishes it's main science goals, it is therefore crucial to have a firm understanding of these backgrounds. Although we are still in the early stages of development, with DC2 we have made significant progress in characterizing the background emission. Further details can be found in the [backgrounds](https://github.com/cositools/cosi-data-challenge-2/tree/main/backgrounds) directory. 
+In general, observations in the MeV band are hindered by high backgrounds (both instrumental and astrophysical). In order to ensure that COSI accomplishes it's main science goals, it is therefore crucial to have a firm understanding of these backgrounds. Although we are still in the early stages of development, with DC2 we have made significant progress in characterizing the background emission for COSI. Further details can be found in the [backgrounds](https://github.com/cositools/cosi-data-challenge-2/tree/main/backgrounds) directory. 
 
-For analyzing data in DC2, the backgrounds are modeled using the actual backgrounds themselves. This is the ideal case, where the backgrounds are perfectly known, which of course is not realistic. In future data challenges we will be developing tools for estimating backgrounds when they are not perfectly known, as will be the case for the actual observations.    
+For analyzing data in DC2, the backgrounds are modeled using the actual backgrounds themselves. This is, of course, the ideal case, where the backgrounds are perfectly known, which is not realistic. In future data challenges we will be developing tools for estimating backgrounds when they are not perfectly known, as will be the case for the actual observations.    
 
 ## Data Challanges
 
