@@ -16,6 +16,8 @@ This year's data challenge is based on 3 months of exposure time, for an equator
 ## Backgrounds
 In general, observations in the MeV band are hindered by high backgrounds (both instrumental and astrophysical). In order to ensure that COSI accomplishes it's main science goals, it is therefore crucial to have a firm understanding of these backgrounds. Although we are still in the early stages of development, with DC2 we have made significant progress in characterizing the background emission. Further details can be found in the [backgrounds](https://github.com/cositools/cosi-data-challenge-2/tree/main/backgrounds) directory. 
 
+For analyzing data in DC2, the backgrounds are modeled using the actual backgrounds themselves. This is the ideal case, where the backgrounds are perfectly known, which of course is not realistic. In future data challenges we will be developing tools for estimating backgrounds when they are not perfectly known, as will be the case for the actual observations.    
+
 ## Data Challanges
 
 
