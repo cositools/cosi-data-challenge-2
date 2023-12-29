@@ -1,3 +1,12 @@
+# Backgrounds
+
+### Summary
+We simululated 3 months of instrumental and astrophysical backgrounds (BGs). The astrophysical BGs include albedo emission and cosmic photons (i.e. the extragalactic gamma-ray background). The instrumental backgrounds arise from cosmic rays bombarding the instrument, and there is both a prompt component and a delayed component. The former is mainly due to the cosmic ray particles directly triggering the instrument. The latter is due to activation of the irradiated materials, which subsequently decay and emit photons that contribute to the BG emission. Another important BG for COSI will be due to passage through the Southern Atlantic Anomoly (SAA). However, the SAA component is not included in DC2, but it will be included starting with DC3. Additionally, another important BG to account for is long-term buildup of the activation emission. This too is not included in DC2, but will be included starting with DC3. Spectra and lightcurves for the DC2 BG components are shown below. 
+
+<p align="center">
+<img width="950"  src="images/bg_components.png">
+</p>
+
 ## Input Models
 
 ### Spectra and Source Files 
@@ -7,7 +16,7 @@ The input spectra are generated using the model from [Cumani](https://link.sprin
 <img width="450"  src="images/input_spectra.png">
 </p>
 
-## Geomagnetic Cut-Off (GC) Dependencies
+### Geomagnetic Cut-Off (GC) Dependencies
 The spacecraft coordinates have been generated with [SPENVIS](https://www.spenvis.oma.be/intro.php), as shown below. 
 
 <p align="center">
