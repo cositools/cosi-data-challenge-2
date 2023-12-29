@@ -9,7 +9,7 @@ This year's data challenge is based on 3 months of exposure time, for an equator
 
 The input models and challenges for DC2 were provided by the COSI science teams. There are challenges for the different science groups: GRBs, Positrons, Nucleosynthesis, Galactic, and Extragalactic. These are described in detail in the **Data Challenges** section below.  
 
-In summary, to get started with DC2, install cosipy, download the simulated data products from wasabi, and then start working through the data challenges, as described below. 
+In summary, to get started with DC2, install cosipy, familiarize yourself with the data products, and then start working through the data challenges, as described below. 
 
 ## Getting Help
 Please submit a New Issue in the [cosipy](https://github.com/cositools/cosipy) git repository if you have issues with the code. If you have general feedback, or need further assistance, please reach out to the COSI Data Challenge team lead, Chris Karwin ([christopher.m.karwin@nasa.gov](mailto:christopher.m.karwin@nasa.gov)), the cosipy implementation lead, Israel Martinez-Castellanos ([israel.martinezcastellanos@nasa.gov](israel.martinezcastellanos@nasa.gov)), and the pipeline development lead Carolyn Kierans ([carolyn.a.kierans@nasa.gov](carolyn.a.kierans@nasa.gov)).
