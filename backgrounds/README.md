@@ -1,11 +1,12 @@
 # Backgrounds
 
 ### Summary
-We simululated 3 months of instrumental and astrophysical backgrounds (BGs). The astrophysical BGs include albedo emission and cosmic photons (i.e. the extragalactic gamma-ray background). The instrumental backgrounds arise from cosmic rays bombarding the instrument, and there is both a prompt component and a delayed component. The former is mainly due to the cosmic ray particles directly triggering the instrument. The latter is due to activation of the irradiated materials, which subsequently decay and emit photons that contribute to the BG emission. Another important BG for COSI will be due to passage through the Southern Atlantic Anomoly (SAA). However, the SAA component is not included in DC2, but it will be included starting with DC3. Additionally, another important BG to account for is long-term buildup of the activation emission. This too is not included in DC2, but will be included starting with DC3. Spectra and lightcurves for the DC2 BG components are shown below. 
+We simululated 3 months of instrumental and astrophysical backgrounds (BGs), using an equatorial orbit at 550 km with a zenith pointing. The astrophysical BGs include albedo emission and cosmic photons (i.e. the extragalactic gamma-ray background). The instrumental backgrounds arise from cosmic rays bombarding the instrument, and there is both a prompt component and a delayed component. The former is due to the cosmic ray particles directly triggering the instrument. The latter is due to activation of the irradiated materials, which subsequently decay and emit photons that contribute to the BG emission. Our background simulations account for the time-dependence due to the changing geomagnetic cutoff along the orbit. Another important BG for COSI will be due to passage through the Southern Atlantic Anomoly (SAA). The SAA component is not included in DC2, but it will be included starting with DC3. Additionally, another important BG to account for is long-term buildup of the activation emission. This too is not included in DC2, but will be included starting with DC3. Spectra and lightcurves for the DC2 BG components are shown in the figure below. Further details about the BG simulations are provided in the sections that follow. 
 
 <p align="center">
 <img width="950"  src="images/bg_components.png">
 </p>
+
 
 ## Input Models
 
@@ -16,20 +17,20 @@ The input spectra are generated using the model from [Cumani](https://link.sprin
 <img width="450"  src="images/input_spectra.png">
 </p>
 
-### Geomagnetic Cut-Off (GC) Dependencies
+### Geomagnetic Cut-Off Dependencies
 The spacecraft coordinates have been generated with [SPENVIS](https://www.spenvis.oma.be/intro.php), as shown below. 
 
 <p align="center">
 <img width="450"  src="images/spenvis_coordinates.png">
 </p>
 
-Based on these coordinates, the average GC (in GV) is calculated as in Smart and Shea (2005):
+Based on these coordinates, the average geomagnetic cutoff (in GV) is calculated as in Smart and Shea (2005):
 
 $$ R_{\mathrm{cutoff}} = \frac{g^1_0\cdot R_{\mathrm{Earth}}}{4}\cdot \left( 1+\frac{h}{R_{\mathrm{Earth}}}\right)^{-2}\cos^4({\lambda}), $$
 
-with $h$ the altitude in km, $R_{\mathrm{Earth}}$ the radius of Earth, $\lambda$ the geomagnetic latitude, and $g^1_0$ a coefficient computed by the International Geomagnetic Reference Field [IGRF](https://www.ncei.noaa.gov/products/international-geomagnetic-reference-field). The geomagnetic latitude for each orbit is computed with the python package [aacgmv2](https://pypi.org/project/aacgmv2/). The IGRF results are released every 5 years. For the DC2 simulations we used the value from the years 2020-2025: $g^1_0 =29404.8$ nT. This values is known to be decreasing with time, and the planed launch date for COSI is 2027. The corresponding change is minimal, but nevertheless, we plan to still update the GC distribution for future simulations (DC3).       
+with $h$ the altitude in km, $R_{\mathrm{Earth}}$ the radius of Earth, $\lambda$ the geomagnetic latitude, and $g^1_0$ a coefficient computed by the International Geomagnetic Reference Field [IGRF](https://www.ncei.noaa.gov/products/international-geomagnetic-reference-field). The geomagnetic latitude for each orbit is computed with the python package [aacgmv2](https://pypi.org/project/aacgmv2/). The IGRF results are released every 5 years. For the DC2 simulations we used the value from the years 2020-2025: $g^1_0 =29404.8$ nT. This values is known to be decreasing with time, and the planed launch date for COSI is 2027. The corresponding change is minimal, but nevertheless, we plan to still update the geomagnetic cutoff distribution for future simulations.       
 
-We calculate the GC for 15 second time intervals of the 3 month orientation file, and use this to obtain the integrated spectrum for each BG component. The GC dependencies for each component are described in the [Cumani+19](https://link.springer.com/article/10.1007/s10686-019-09624-0). This results in a light curve for each component, which are used as input for the simulation in order to take into account the GC dependencies in the expected BG flux. Note that cosima only takes the LC shape into account, and the overall flux normalization is set by the spectrum. We make the simplifying approximation that the spectral shape is constant with time. This is a reasonable assumption, considering that the GC only varies from 9-11.5 GV.  
+We calculate the geomagnetic cutoff for 15 second time intervals of the 3 month orientation file, and use this to obtain the integrated spectrum for each BG component. The geomagnetic cutoff dependencies for each component are described in [Cumani+19](https://link.springer.com/article/10.1007/s10686-019-09624-0). This results in a light curve for each component, which are used as input for the simulation in order to take into account the GC dependencies in the expected BG flux. Note that cosima only takes the LC shape into account, and the overall flux normalization is set by the spectrum. We make the simplifying approximation that the spectral shape is constant with time. This is a reasonable assumption, considering that the GC only varies from 9-11.5 GV.  
     
 
     
