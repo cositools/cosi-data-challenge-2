@@ -34,7 +34,7 @@ We calculate the geomagnetic cutoff for 15 second time intervals of the 3 month 
 
 ## Simulations
 
-The simulations have been ran with MEGAlib using the super cluster [MOGON](https://mogonwiki.zdv.uni-mainz.de/docs/introduction/what_is_mogon) in Mainz and Clemson University's [Palmetto](https://docs.rcd.clemson.edu/palmetto/) cluster. 
+The simulations have been ran on the super cluster [MOGON](https://mogonwiki.zdv.uni-mainz.de/docs/introduction/what_is_mogon) in Mainz and Clemson University's [Palmetto](https://docs.rcd.clemson.edu/palmetto/) cluster. They employ [MEGAlib](https://github.com/zoglauer/megalib) (*main* and *feature/dee2022* branch) via the COSI simulation pipepline ([cosi-data-challenges](https://github.com/cositools/cosi-data-challenges)), using version 12 of the COSI-SMEX mass model. More specifically, for the source simulations (with *cosima*) we use the *main* branch, together with the COSISMEX.Geo.setup version of the mass model. This has a high strip pitch for charge sharing. For the event reconstruction (with *revan*) we use the *feature/dee2022* branch, together with the COSISMEX.O64.geo.setup version of the mass model. This implements the new detector effects engine (i.e. dee2022). 
 
 ### Cosima
 The first step of the simulations is done with *cosima*. The *main* branch is used with the mass model file **COSISMEX.geo.setup**. In order to use multiple CPUs, the orientation and light curve files are split into smaller time bins. Each time bin corresponds to a single job, which uses a single CPU, along with the corresponding orientation and light curve files for that bin. 
@@ -48,9 +48,20 @@ The activation simulations are divided into three parts:
 * Step 2. Calculation of the isotope rates after one year of constant irradiation. For the step 2 source file, combine the isotope files from all parallel runs (this step cannot be ran in parallel). It's best to run this from the command line. It shouldn't take very long -- less than an hour. Step 2 will generate the activation file. This can then be used as the source file for all parallel runs in step 3. The `TT' keyword in the activation file does not need to be modified.
     
 * Step 3. Simulation of the isotopes decay after the irradiation. Here the simulation time is also 3 months. This step can be ran in parallel and an orientation file needs to be specified like in step 1.
-    
 
-    
+### Revan 
 
+The second step is the event reconstruction done by *revan*. This part uses the *feature/dee2022* branch of MEGAlib with the mass-model file **COSISMEX.O64.geo.setup** and the configuration file **SMEXv12.Continuum.HEALPixO3.binnedimaging.revan.cfg**. 
+
+### Mimrec
+
+The last step is the event selection done by *mimrec* using the configuration file **SMEXv12.Continuum.HEALPixO3.binnedimaging.mimrec.cfg**. Here, all the tra files from the individual time bins are regrouped into a single extracted file that is then converted into a FITS file (using cosipy).  
+
+### Computation Time
+The simulations are very computationally intensive. The most time consuming simulations were the primary protons. Specifically, step 1 of the activation sims takes the longest. We ended up using 6045 parallel CPUs. This corresponds to a time bin size of 1320 seconds (22 minutes). The average compute time for each CPU was ~5000 minutes (3.5 days). This gives a total CPU time of ~57.5 years! The CPU time per job (for half of the total CPUs) used to simulate the primary protons is shown below.
+    
+<p align="center">
+<img width="450"  src="images/computation_time.png">
+</p>
     
 
