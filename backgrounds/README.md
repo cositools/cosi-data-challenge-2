@@ -1,7 +1,7 @@
 # Backgrounds
 
-### Summary
-We employed MEGAlib to simululate 3 months of instrumental and astrophysical backgrounds (BGs), using an equatorial orbit at 550 km with a zenith pointing. The astrophysical BGs include albedo emission and cosmic photons (i.e. the extragalactic gamma-ray background). The instrumental backgrounds arise from cosmic rays bombarding the instrument, and there is both a prompt component and a delayed component. The former is due to cosmic ray particles directly triggering the instrument. The latter is due to activation of the irradiated materials, which subsequently decay and emit photons that contribute to the BG emission. The dominant insturmental BGs arise from primary protons, primary alpha particles, atmospheric neutrons, primary electrons, primary positrons, and secondary protons, all of which are included in DC2. Our background simulations account for the time-dependent flux variation due to the changing geomagnetic cutoff along the orbit. Another important BG for COSI will be due to passage through the Southern Atlantic Anomoly (SAA). The SAA component is not included in DC2, but it will be included starting with DC3. Additionally, it will also be important to account for the long-term buildup of the activation emission. This is also not included in DC2, but will be included starting with DC3. Spectra and lightcurves for the DC2 BG components are shown below. Further details about the BG simulations are provided in the sections that follow. 
+### Executive Summary
+We employed MEGAlib to simululate 3 months of instrumental and astrophysical backgrounds (BGs), using an equatorial orbit at 550 km with a zenith pointing. The astrophysical BGs include albedo emission and cosmic photons (i.e. the extragalactic gamma-ray background). The instrumental backgrounds arise from cosmic rays bombarding the instrument, and there is both a prompt component and a delayed component. The former is due to cosmic ray particles directly triggering the instrument. The latter is due to activation of the irradiated materials, which subsequently decay and emit photons that contribute to the BG emission. The dominant insturmental BGs arise from primary protons, primary alpha particles, atmospheric neutrons, primary electrons, primary positrons, and secondary protons, all of which are included in DC2. Our background simulations account for the time-dependent flux variation due to the changing geomagnetic cutoff along the orbit. Another important BG for COSI will be due to passage through the Southern Atlantic Anomoly (SAA). The SAA component is not included in DC2, but it will be included starting with DC3. Additionally, it will also be important to account for the long-term buildup of the activation emission. This too is not included in DC2, but will be included starting with DC3. Spectra and lightcurves for the DC2 BG components are shown below. Further details about the BG simulations are provided in the sections that follow. 
 
 <p align="center">
 <img width="950"  src="images/bg_components.png">
@@ -17,7 +17,7 @@ The input spectra are generated using the model from [Cumani](https://link.sprin
 <img width="450"  src="images/input_spectra.png">
 </p>
 
-### Geomagnetic Cut-Off Dependencies
+### Geomagnetic Cutoff Dependencies
 The spacecraft coordinates have been generated with [SPENVIS](https://www.spenvis.oma.be/intro.php), as shown below. 
 
 <p align="center">
@@ -58,10 +58,34 @@ The second step is the event reconstruction done by *revan*. This part uses the 
 The last step is the event selection done by *mimrec* using the configuration file **SMEXv12.Continuum.HEALPixO3.binnedimaging.mimrec.cfg**. Here, all the tra files from the individual time bins are regrouped into a single extracted file that is then converted into a FITS file (using cosipy).  
 
 ### Computation Time
-The simulations are very computationally intensive. The most time consuming simulations were the primary protons. Specifically, step 1 of the activation sims takes the longest. We ended up using 6045 parallel CPUs. This corresponds to a time bin size of 1320 seconds (22 minutes). The average compute time for each CPU was ~5000 minutes (3.5 days). This gives a total CPU time of ~57.5 years! The CPU time per job (for half of the total CPUs) used to simulate the primary protons is shown below.
+The simulations are very computationally intensive. The most time consuming simulations were the primary protons. Specifically, step 1 of the activation simulations takes the longest. We ended up using 6045 parallel CPUs. This corresponds to a time bin size of 1320 seconds (22 minutes). The average compute time for each CPU was ~5000 minutes (3.5 days). This gives a total CPU time of ~57.5 years! The CPU time per job (for half of the total CPUs) used to simulate the primary protons is shown below.
     
 <p align="center">
-<img width="450"  src="images/computation_time.png">
+<img width="400"  src="images/computation_time.png">
 </p>
-    
+
+## Results
+
+### Spectra and Light Curves 
+The resulting spectra for each component are shown in the left figure at the top of this page. Note that here we are only considering the reconstructed Compton events, using the DC2 event selection. We can observe a dominance of the cosmic photons up to ~1 MeV, and at higher energies the BG is dominated by albedo photons and the delayed component of cosmic proton activation. "Delayed" refers to decay times longer than 2 &mu;s, which is the assumed anti-coincidence window with the veto shield. The rates for each component are shown in the right component at the top of the page. As expected, the rate is dominated by the cosmic photons and the proton/alpha delayed components. The total rates for the energy bands corresponding to the 0.511 MeV and Al26 emission lines are given below:
+* 508 - 512 keV: 0.1848 Hz
+* 1805 - 1812 keV: 0.0112 Hz
+
+### Time Variation
+
+On a daily scale, it is difficult to see the variation due to the geomagnetic cutoff. However, on the minute scale we can observe the rate variation which is opposite to the geomagnetic variation, as shown below. 
+
+<p align="center">
+<img width="550"  src="images/rate_geomagnetic_cutoff_comparison.png">
+</p>
+
+This validates the light curve models we used as input for the simulations. The total BG rate (without cosmic photons) as a function of the spacecraft geographic coordinates is shown in the left figure below and as function of the geographic longitude in the right figure below. 
+
+<p align="center">
+<img width="800"  src="images/geomagnetic_cutoff_location_comparison.png">
+</p>
+
+### Activation Backgrounds
+
+We can observe several lines in the delayed components due to the activation of materials present in the mass model. The fact that a majority of the lines are common for all components suggests that these isotopes are produced by spallation reactions at high energy, where the type of particle does not matter. An interactive nucleus map showing activities of all the isotopes (in $log_{10}(Bq)$) produced by the primary protons after 1 year of irradiation can be found [here](https://raw.githack.com/GallegoSav/COSI_DC2/main/DC2_Activation_proton_step2.html). This map allows us to identify lines, in cases where there are many candidates for a single line. As a first approach the line energies in the total spectrum are determined manually using matplotlib. A more robust method for the future will be to fit each line with a Gaussian, with its width constrained at the instrumental resolution. Almost all the lines are identified thanks to the identification of SPI/INTEGRAL BG lines in [Weidenspointner+03](https://hal.in2p3.fr/in2p3-00022236v1/file/in2p3-00022236.pdf). The table below summarizes most of the lines we can identify in the total spectrum. 
 
