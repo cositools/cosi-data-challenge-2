@@ -33,10 +33,10 @@ As a very first step, try working through some of the example notebooks. Specifi
 
 ## GRBs
 Included are:
-3 long GRBs with realistic lightcurves - GRB080723557.source, GRB090206620.source, GRB130425327.source
-3 short GRBs with realistic lightcurves - GRB090227772.source, GRB090228204.source, GRB101216721.source
-4 short GRBs with constant lightcurves - GRB080725541.source, GRB081101491.source, GRB081122614.source, GRB081223419.source
-2 magnetar giant flares (MGFs) - GRB180128215.source, GRB200415A.source
+3 long GRBs with realistic lightcurves: GRB080723557.source, GRB090206620.source, GRB130425327.source
+3 short GRBs with realistic lightcurves: GRB090227772.source, GRB090228204.source, GRB101216721.source
+4 short GRBs with constant lightcurves: GRB080725541.source, GRB081101491.source, GRB081122614.source, GRB081223419.source
+2 magnetar giant flares (MGFs): GRB180128215.source, GRB200415A.source
 
 Spectra are either Band function or Comptonized spectrum fits from GBM.
 Long GRB lightcurves are downloaded directly from GBM.
