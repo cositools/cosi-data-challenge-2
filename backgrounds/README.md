@@ -1,6 +1,6 @@
 # Backgrounds
 
-### Executive Summary
+### Summary
 We employed MEGAlib to simululate 3 months of instrumental and astrophysical backgrounds (BGs), using an equatorial orbit at 550 km with a zenith pointing. The astrophysical BGs include albedo emission and cosmic photons (i.e. the extragalactic gamma-ray background). The instrumental backgrounds arise from cosmic rays bombarding the instrument, and there is both a prompt component and a delayed component. The former is due to cosmic ray particles directly triggering the instrument. The latter is due to activation of the irradiated materials, which subsequently decay and emit photons that contribute to the BG emission. The dominant insturmental BGs arise from primary protons, primary alpha particles, atmospheric neutrons, primary electrons, primary positrons, and secondary protons, all of which are included in DC2. Our background simulations account for the time-dependent flux variation due to the changing geomagnetic cutoff along the orbit. Another important BG for COSI will be due to passage through the Southern Atlantic Anomoly (SAA). The SAA component is not included in DC2, but it will be included starting with DC3. Additionally, it will also be important to account for the long-term buildup of the activation emission. This too is not included in DC2, but will be included starting with DC3. Spectra and lightcurves for the DC2 BG components are shown below. Further details about the BG simulations are provided in the sections that follow. 
 
 <p align="center">
