@@ -32,26 +32,39 @@ Example 6: [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tuto
 As a very first step, try working through some of the example notebooks. Specific challenges for the different science topics are described below. You can start with whichever topic you are most interested in. Each challenge will refer you to a specific example notebook that will demonstrate the basic tools needed to complete the respective challenge. If you have completed the main challenges and are interested in further challenges, see the **Extra Challenges** section at the bottom of this page. 
 
 ## GRBs
-Included are:
-3 long GRBs with realistic lightcurves: GRB080723557.source, GRB090206620.source, GRB130425327.source
-3 short GRBs with realistic lightcurves: GRB090227772.source, GRB090228204.source, GRB101216721.source
-4 short GRBs with constant lightcurves: GRB080725541.source, GRB081101491.source, GRB081122614.source, GRB081223419.source
-2 magnetar giant flares (MGFs): GRB180128215.source, GRB200415A.source
+ The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
 
-Spectra are either Band function or Comptonized spectrum fits from GBM.
-Long GRB lightcurves are downloaded directly from GBM.
-Short GRB realistic lightcurves are downloaded from GBM & binned using Bayesian blocks.
-Short GRB constant lightcurves are constant over the duration of the GRB.
-Magnetar giant flare lightcurves are downloaded from GBM & binned using Bayesian blocks.
+**Data Files:** <br />
+3 long GRBs with realistic lightcurves: <br />
+GRB080723557_unbinned_data.fits.gz  <br />
+GRB090206620_unbinned_data.fits.gz <br />
+GRB130425327_unbinned_data.fits.gz <br />
 
-GRBs occur randomly in time throughout the duration of the orientation file (20280301_3_month_edited.ori), and 1835487300.0 s needs to be added to the .sim files to match the Data Challenge 2 orientation file. 
-GRB positions were chosen to have incidence angles between 0 and 30 degrees with a range of azimuthal angles.
+3 short GRBs with realistic lightcurves: <br />
+GRB090227772_unbinned_data.fits.gz <br />
+GRB090228204_unbinned_data.fits.gz <br />
+GRB101216721_unbinned_data.fits.gz <br />
 
-Goals:
-Determine time of each event and create lightcurve
-Determine source locations
-Fit spectra
-Identify event type (GRB vs MGF)
+4 short GRBs with constant lightcurves: <br />
+GRB080725541_unbinned_data.fits.gz <br />
+GRB081101491_unbinned_data.fits.gz <br />
+GRB081122614_unbinned_data.fits.gz <br />
+GRB081223419_unbinned_data.fits.gz <br />
+
+2 magnetar giant flares (MGFs): <br />
+GRB180128215_unbinned_data.fits.gz <br />
+GRB200415A_unbinned_data.fits.gz <br />
+
+**Input Models** <br />
+All input models used for the simulations can be found [here](https://github.com/cositools/cosi-data-challenges/tree/main/cosi_dc/Source_Library/DC2/sources/GRBs). Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB lightcurves are downloaded directly from GBM. Short GRB realistic lightcurves are downloaded from GBM & binned using Bayesian blocks. Short GRB constant lightcurves are constant over the duration of the GRB. Magnetar giant flare lightcurves are downloaded from GBM & binned using Bayesian blocks.
+
+GRBs occur randomly in time throughout the duration of the 3 month exposure. GRB positions were chosen to have incidence angles between 0 and 30 degrees with a range of azimuthal angles.
+
+**Goals**
+1) Determine time of each event and create lightcurve
+2) Determine source locations
+3) Fit spectra
+4) Identify event type (GRB vs MGF)
 
 ## Positrons
 May 17th, 2023 - Carolyn Kierans
