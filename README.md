@@ -31,11 +31,13 @@ Example 6: [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tuto
 
 As a very first step, try working through some of the example notebooks. Specific challenges for the different science topics are described below. You can start with whichever topic you are most interested in. Each challenge will refer you to a specific example notebook that will demonstrate the basic tools needed to complete the respective challenge. If you have completed the main challenges and are interested in further challenges, see the **Extra Challenges** section at the bottom of this page. 
 
+All input models used for the simulation can be found in the DC2 source library of the COSI simulation pipeline, available [here](https://github.com/cositools/cosi-data-challenges/tree/main/cosi_dc/Source_Library/DC2/sources). This includes all the information about the injected sources, and it can be used for checking 
+
 ## GRBs
  The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
 
 **Data Files:** <br />
-3 long GRBs with realistic lightcurves: <br />
+3 long GRBs with realistic lightcurves: <br /> 
 GRB080723557_unbinned_data.fits.gz  <br />
 GRB090206620_unbinned_data.fits.gz <br />
 GRB130425327_unbinned_data.fits.gz <br />
@@ -51,39 +53,39 @@ GRB081101491_unbinned_data.fits.gz <br />
 GRB081122614_unbinned_data.fits.gz <br />
 GRB081223419_unbinned_data.fits.gz <br />
 
-2 magnetar giant flares (MGFs): <br />
+2 magnetar giant flares (MGFs): <br /> 
 GRB180128215_unbinned_data.fits.gz <br />
 GRB200415A_unbinned_data.fits.gz <br />
 
-**Input Models** <br />
-All input models used for the simulations can be found [here](https://github.com/cositools/cosi-data-challenges/tree/main/cosi_dc/Source_Library/DC2/sources/GRBs). Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB lightcurves are downloaded directly from GBM. Short GRB realistic lightcurves are downloaded from GBM & binned using Bayesian blocks. Short GRB constant lightcurves are constant over the duration of the GRB. Magnetar giant flare lightcurves are downloaded from GBM & binned using Bayesian blocks.
+**Input Models:** <br />
+Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB lightcurves are downloaded directly from GBM. Short GRB realistic lightcurves are downloaded from GBM & binned using Bayesian blocks. Short GRB constant lightcurves are constant over the duration of the GRB. Magnetar giant flare lightcurves are downloaded from GBM & binned using Bayesian blocks. GRBs occur randomly in time throughout the duration of the 3 month exposure. GRB positions were chosen to have incidence angles between 0 and 30 degrees with a range of azimuthal angles.
 
-GRBs occur randomly in time throughout the duration of the 3 month exposure. GRB positions were chosen to have incidence angles between 0 and 30 degrees with a range of azimuthal angles.
-
-**Goals**
+**Goals:**
 1) Determine time of each event and create lightcurve
 2) Determine source locations
 3) Fit spectra
 4) Identify event type (GRB vs MGF)
 
 ## Positrons
-May 17th, 2023 - Carolyn Kierans
+The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and 511 spectral fit notebooks. 
 
-This is the description of the source model for the 511 keV positron annihilation emission in the Galaxy for DC2
+**Data Files:** <br />
+511_thick_disk_3months_unbinned_data.fits.gz <br />
+511_thick_disk10x_3months_unbinned_data.fits.gz <br />
+511_thin_disk_3months_unbinned_data.fits.gz <br />
+511_thin_diskx10_3months_unbinned_data.fits.gz <br />
 
-Spatial: Simple Gaussian spatial models with a thin or thick disk. The bulge is based off of the model in Skinner et al. 2014 (and used in Siegert et al. 2016) and includes a narrow and broad buldge, and a central point source. The disk descriptions follow Skinner for the thin disk (3 deg scale height) and Siegert for the thick disk (10.5 deg scale height)
+**Input Models:** <br />
 
-Spectral: Each spatial component has two spectral components. 
+Spatial: <br />
+Simple Gaussian spatial models with a thin or thick disk. The bulge is based off of the model in Skinner et al. 2014 (and used in Siegert et al. 2016) and includes a narrow and broad buldge, and a central point source. The disk descriptions follow Skinner for the thin disk (3 deg scale height) and Siegert for the thick disk (10.5 deg scale height).
 
-1) A line at 511 keV. This has a 2 keV FWHM width for the bulge components, and 3 keV FWHM for the disk emission.
+Spectral: <br /> 
+Each spatial component has two spectral components: 1) A line at 511 keV. This has a 2 keV FWHM width for the bulge components, and 3 keV FWHM for the disk emission. 2) the orthopositrium (OPs) continuum emission (as described by Ore 1949). The spectral shape of the OPs continuum is included in the OPsSpectrum.dat file and shown in ops_spectrum.pdf. The relative fluxes of the OPs and 511 are scale such that the positronium fraction for the disk is 85% and the fraction for the bulge is 95%.
 
-2) the orthopositrium (OPs) continuum emission (as described by Ore 1949). The spectral shape of the OPs continuum is included in the OPsSpectrum.dat file and shown in ops_spectrum.pdf.
+Both models are included at 1x and 10x nominal flux.
 
-The relative fluxes of the OPs and 511 are scale such that the positronium fraction for the disk is 85% and the fraction for the bulge is 95%
-
-Both models are included at 1x and 10x nominal flux 
-
-Goals: 
+**Goals:**
 1) Make full sky image of 511 keV (image deconvolution)
 2) Determine scale height of disk emission (model fitting)
 3) Extract the spectra of the bulge emission
