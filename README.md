@@ -105,31 +105,13 @@ Al26_R5000_z0200_M30_10xflux_3months_unbinned_data.fits.gz <br />
 
 There are two realisations from the same doubly exponential disk model. The three-dimensional model is
 
-$rho(R,z,phi) = L / (4 * pi * Re^2 * ze) * exp(-R/Re) * exp(-|z|/ze)$,
+$$&rho;(R,z,&phi;) = L / (4 &pi; R_s^2  z_s) * exp(-R/R_s) * exp(-|z|/z_s)$$
+where L is the total luminosity of Al26 in the Galaxy, i.e. $L = M/m * p/&tau;$, with $m = 26 u$ the atomic mass of Al26 nuclei, $p = 0.9976$ is the branching ratio to emit a photon, and $&tau; = 1.05$ Myr is the lifetime of Al26. This gives a quasi-persistent luminosity for a "living" Al26 mass $M$. The values $R_s$ and $z_s$ are the scale radius and scale height, respectively. The radial coordinate is given by $R$, i.e. $R = \sqrt{(x-x_0)^2 + (y-y_0)^2}$, and $z$ is the vertical coordinate, $z = z' - z_0$, where $x_0 = 8.178$, $y_0 = 0$, and $z_0 = -0.019$ are the coordinates of the Galactic centre seen from Earth. All distance and size units are in kpc. The line of sight integration is performed so that the flux per pixel (here: cartesian pixel grid with 3 deg resolution) is in units of ph / cm2 / s / sr.
 
-where L is the total luminosity of 26Al in the Galaxy, i.e. L = M/m * p/tau with
-
-m = 26 u as the atomic mass of 26Al nuclei, p = 0.9976 is the branching ratio to emit a photon, and
-tau = 1.05 Myr is the lifetime of 26Al. This gives a quasi-persistent luminosity for a "living"
-26Al mass M.
-
-Re and ze are the scale radius and scale height, respectively.
-
-R is the radial coordinate, i.e. R = sqrt((x-x0)^2 + (y-y0)^2), and z is the vertical coordinate, z = z' - z0.
-x0 = 8.178, y0 = 0, and z0 = -0.019 are the coordinates of the Galactic centre seen from Earth.
-
-All distance / size units are in kpc.
-
-The line of sight integration is performed so that the flux per pixel (here: cartesian pixel grid with 3 deg
-resolution) is in units of ph / cm2 / s / sr.
-
-
-The two models are
-Model 1:
-M = 3 Msol -> L = 4.162e42 ph/s -> F = 1.278e-3 ph / cm2 / s
-Re = 5.0
-ze = 0.2
-filenames: COSI_DC2_26Al_R5000_z0200_M30_3deg
+Model 1: Al26_R5000_z0200_M30  <br />
+$M = 3$ Msol $\implies L = 4.162e42$ ph/s $\implies F = 1.278e-3$ ph / cm2 / s <br />
+$R_s = 5.0$  <br />
+$z_s = 0.2$  <br />
 
 Model 2:
 M = 6 Msol -> L = 8.324e42 ph/s -> F = 1.800e-3 ph / cm2 / s
