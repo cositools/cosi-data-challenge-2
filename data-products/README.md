@@ -19,8 +19,12 @@ More specifically, for the source simulations (with *cosima*) we use the *main* 
 ### Data Format
 The data is provided in fits file format, which contains all of the photon information. If you are unfamiliar with analysis of Compton data, we highly recommend reading the [DC1](https://github.com/cositools/cosi-data-challenge-1) introduction page, which covers some of the key topics. In short, each photon event is decribed in terms of four axes: energy, time, compton scattering angle (&phi;), and event circle axis (&Psi; &Chi;). For Compton data, photons occupy what is known as the Compton data space, which is the 3-dimensional space defined by the axes &phi;, &psi;, and &chi;. For the actual analysis, &psi; and &chi; are defined using a healpix grid, allowing us to reduce this to a single dimenion (&Psi; &Chi;), i.e. the healpix pixel number.  
 
+There are fits files for each individual component, for both sources and backgorunds. Each data challenge specifies the source files that you'll need. In order to create the dataset for a given data challenge, you will need to combine the source data with the background data. Instructions on how to do this are provided in the example jupyter notebooks, as well as the DataIO example in cosipy.  
+
 ### Computing Resources 
+
 <img  align="right" width="250"  src="images/clusters.png">
+
 The source simulations were ran on NASA's [Discover cluster](https://www.nccs.nasa.gov/systems/discover). We used 1000 parallel CPUs for most of the source simulations, which allowed us to simulate them in a short time (typically less than ~10 minutes of total compute time per source). The source models were provided by the COSI science teams, and more information about them can be found in the respective **Data Challenges** section on the main page. The Background simulations were ran on the super cluster [MOGON](https://mogonwiki.zdv.uni-mainz.de/docs/introduction/what_is_mogon) in Mainz and Clemson University's [Palmetto](https://docs.rcd.clemson.edu/palmetto/) cluster. Simulations of the backgrounds were highly computationally intensive, and more details can be found in the [backgrounds](https://github.com/cositools/cosi-data-challenge-2/tree/main/backgrounds) directory.
 
 ### Accessing Data
