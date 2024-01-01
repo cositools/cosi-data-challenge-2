@@ -69,10 +69,10 @@ os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5
 wasabi path: COSI-SMEX/DC2/Data/Sources <br />
 
 Sources:
-For DC2 we simulated 30 different sources, and ran 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page.  
+For DC2 we simulated 30 different sources, running 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page.  
 
 Copy from command line: <br />
-Note: This particular example is for 511. For other components you'll need to change the file name accordingly.
+Note: This particular example is for on of the 511 models. For other components you'll need to change the file name accordingly.
 <pre>
 os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Sources/511_thin_diskx10_3months_unbinned_data.fits.gz --endpoint-url=https://s3.us-west-1.wasabisys.com 511_thin_diskx10_3months_unbinned_data.fits.gz")
 </pre>
