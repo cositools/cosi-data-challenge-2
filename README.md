@@ -148,6 +148,7 @@ This is the description of the source models for point like Ti44 line emission i
 4) Identifty the SN surprise. 
 
 ## Galactic 
+The tools needed to complete the Galactic challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab), [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning), GRB localization notebooks.
 
 ### CygX1
 
@@ -189,7 +190,83 @@ In DC2 we consider that the time is split between the Transition (46%) and FSXR 
 1) Check if COSI can achieve a decent measurement of the average spectrum over its lifetime, 
 and if so, check if we can detect the spectral changes on shorter time scales. 
 
+### 1E1740.7-2942
+
+**Data Files:** <br />
+1E1740_compton-powerlaw_3months_unbinned_data.fits.gz <br />
+1E1740_two_components_3months_unbinned_data.fits.gz <br />
+
+**Input Models:**  <br />
+The 2 spectral models for 1E1740.7-2942 (also know as great annihilator) are the best fit models
+ of INTEGRAL data obtained by [Bouchet+09](https://iopscience.iop.org/article/10.1088/0004-637X/693/2/1871/pdf):
+ - compton-powerlaw: thermal comptonization + powerlaw
+ - two components: two components of thermal comptonization with different temperatures
+Both models represent the INTEGRAL data well but strongly differ at the highest energies.
+
+**Goals:** <br />
+1) Test if COSI can distinguish between the two models.
+
+### GRS 1758-258
+
+**Data Files:** <br />
+missing.
+
+### PSR J1513-5908 (B1509-58)
+
+**Data Files:** <br />
+PSRB1509_3months_unbinned_data.fits.gz
+
+**Input Models:**  <br />
+Pulse profile and spectrum from [Kuiper+15](https://doi.org/10.1093/mnras/stv426). The source is divided into 3 energy bands: <br />
+Band1: 100-250 keV <br />
+Band2: 250-750 keV <br />
+Band3: 0.75-10 MeV <br />
+
+**Goals:** <br />
+1) Detection and measurement of phase-integrated spectrum.
+
+### PSR J1846-0258
+
+**Data Files:** <br />
+PSRJ1846_3months_unbinned_data.fits.gz
+
+**Input Models:**  <br />
+Pulse profile and spectrum from [Kuiper+18](https://doi.org/10.1093/mnras/stx3128).
+
+**Goals:** <br />
+1) Detection and measurement of phase-integrated spectrum.
+
+### Crab DC2
+
+**Data Files:** <br />
+Crab_DC2_3months_unbinned_data.fits.gz
+
+**Input Models:**  <br />
+The pulse profile is from [Kuiper+01](https://doi.org/10.1051/0004-6361:20011256). The spectrum(pulsar + nebula) is from [Petry+09](https://doi.org/10.1051/0004-6361/200912844). The source is divided into 5 energy bands: <br />
+Band1: 100-315 keV <br />
+Band2: 315-750 keV <br />
+Band3: 0.75-1 MeV <br />
+Band4: 1-3 MeV <br />
+Band5: 3-10 MeV <br />
+
+**Goals:** <br />
+1) Detection and measurement of phase-integrated spectrum.
+
+### Crab DC1
+
+**Data Files:** <br />
+crab_3months_unbinned_data.fits.gz
+
+**Input Models:**  <br />
+This is the same input model that was used for DC1. 
+
+**Goals:** <br />
+1) Localize source.
+2) Measure spectrum.
+3) Image source.
+
 ## Extragalactic
+The tools needed to complete the Extragalactic challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) notebook.
 
 ### 3C 273
 
