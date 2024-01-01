@@ -31,4 +31,34 @@ The source simulations were ran on NASA's [Discover cluster](https://www.nccs.na
 
 The data is hosted on wasabi. Files can be downloaded as follows:
 
+**Orientation file:** <br />
+wasabi path: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
 
+Copy from command line:
+<pre>
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori --endpoint-url=https://s3.us-west-1.wasabisys.com 20280301_3_month.ori")
+</pre>
+
+**Background Files:** <br />
+
+wasabi path: COSI-SMEX/DC2/Data/Backgrounds <br />
+
+Components: <br />
+total_bg_3months_unbinned_data.fits.gz <br />
+cosmic_photons_3months_unbinned_data.fits.gz <br />
+albedo_photons_3months_unbinned_data.fits.gz <br />
+primary_protons_prompt_3months_unbinned_data.fits.gz <br />
+primary_protons_decay_3months_unbinned_data.fits.gz <br />
+primary_alphas_prompt_3months_unbinned_data.fits.gz <br />
+primary_alpha_delayed_3months_unbinned_data.fits.gz <br />
+primary_electrons_3months_unbinned_data.fits.gz <br />
+primary_positrons_3months_unbinned_data.fits.gz <br />
+NeutronAtm_prompt_3months_unbinned_data.fits.gz <br />
+NeutronAtm_decay_3months_unbinned_data.fits.gz <br />
+secondary_protons_prompt_3months_unbinned_data.fits.gz <br />
+secondary_protons_delayed_3months_unbinned_data.fits.gz <br />
+
+Copy from command line:
+<pre>
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Backgrounds/cosmic_photons_3months_unbinned_data.fits.gz --endpoint-url=https://s3.us-west-1.wasabisys.com cosmic_photons_3months_unbinned_data.fits.gz")
+</pre>
