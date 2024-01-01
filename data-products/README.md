@@ -25,9 +25,9 @@ There are fits files for each individual component, for both sources and backgro
 
 <img  align="right" width="250"  src="images/clusters.png">
 
-The source simulations were ran on NASA's [Discover cluster](https://www.nccs.nasa.gov/systems/discover). We used 1000 parallel CPUs for most of the source simulations, which allowed us to simulate them in a short time (typically less than ~10 minutes of total compute time per source). The source models were provided by the COSI science teams, and more information about them can be found in the respective **Data Challenges** section on the main page. The Background simulations were ran on the super cluster [MOGON](https://mogonwiki.zdv.uni-mainz.de/docs/introduction/what_is_mogon) in Mainz and Clemson University's [Palmetto](https://docs.rcd.clemson.edu/palmetto/) cluster. Simulations of the backgrounds were highly computationally intensive, and more details can be found in the [backgrounds](https://github.com/cositools/cosi-data-challenge-2/tree/main/backgrounds) directory.
+The source simulations were ran on NASA's [Discover cluster](https://www.nccs.nasa.gov/systems/discover). We used 1000 parallel CPUs for most of the source simulations, which allowed us to simulate them in a short time (typically less than ~10 minutes of total compute time per source). The source models were provided by the COSI science teams, and more information about them can be found in the respective **Data Challenges** section on the main page. The Background simulations were ran on the super cluster [MOGON](https://mogonwiki.zdv.uni-mainz.de/docs/introduction/what_is_mogon) in Mainz and Clemson University's [Palmetto](https://docs.rcd.clemson.edu/palmetto/) cluster. Simulations of the backgrounds were highly computationally intensive. The most time consuming simulations were the primary protons, which required 57.5 years of CPU time! This was accomplished using 6045 parallel cores. More details can be found in the [backgrounds](https://github.com/cositools/cosi-data-challenge-2/tree/main/backgrounds) directory.
 
-### Accessing Data
+### Accessing the Data
 
 The data is hosted on wasabi. Files can be downloaded as follows:
 
@@ -58,7 +58,21 @@ NeutronAtm_decay_3months_unbinned_data.fits.gz <br />
 secondary_protons_prompt_3months_unbinned_data.fits.gz <br />
 secondary_protons_delayed_3months_unbinned_data.fits.gz <br />
 
-Copy from command line:
+Copy from command line: <br />
+Note: This particular example is for cosmic photons. For other components you'll need to change the file name accordingly. 
 <pre>
 os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Backgrounds/cosmic_photons_3months_unbinned_data.fits.gz --endpoint-url=https://s3.us-west-1.wasabisys.com cosmic_photons_3months_unbinned_data.fits.gz")
+</pre>
+
+**Source Files:** <br />
+
+wasabi path: COSI-SMEX/DC2/Data/Sources <br />
+
+Sources:
+For DC2 we simulated 30 different sources, and ran 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page.  
+
+Copy from command line: <br />
+Note: This particular example is for 511. For other components you'll need to change the file name accordingly.
+<pre>
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Sources/511_thin_diskx10_3months_unbinned_data.fits.gz --endpoint-url=https://s3.us-west-1.wasabisys.com 511_thin_diskx10_3months_unbinned_data.fits.gz")
 </pre>
