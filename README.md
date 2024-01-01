@@ -103,10 +103,10 @@ Al26_R5000_z0200_M30_10xflux_3months_unbinned_data.fits.gz <br />
 
 **Input Models:**  <br />
 
-There are two realisations from the same doubly exponential disk model. The three-dimensional model is
+This is the description of the source model for diffuse Al26 line emission in the Galaxy at 1808.63 keV. There are two realisations from the same doubly exponential disk model. The three-dimensional model is
 
-$$&rho;(R,z,&phi;) = L / (4 &pi; R_s^2  z_s) \times exp(-R/R_s) \times exp(-|z|/z_s)$$
-where L is the total luminosity of Al26 in the Galaxy, i.e. $L = M/m * p/&tau;$, with $m = 26 u$ the atomic mass of Al26 nuclei, $p = 0.9976$ is the branching ratio to emit a photon, and $&tau; = 1.05$ Myr is the lifetime of Al26. This gives a quasi-persistent luminosity for a "living" Al26 mass $M$. The values $R_s$ and $z_s$ are the scale radius and scale height, respectively. The radial coordinate is given by $R$, i.e. $R = \sqrt{(x-x_0)^2 + (y-y_0)^2}$, and $z$ is the vertical coordinate, $z = z' - z_0$, where $x_0 = 8.178$, $y_0 = 0$, and $z_0 = -0.019$ are the coordinates of the Galactic centre seen from Earth. All distance and size units are in kpc. The line of sight integration is performed so that the flux per pixel (here: cartesian pixel grid with 3 deg resolution) is in units of ph / cm2 / s / sr.
+$$&rho;(R,z,&phi;) = L / (4 &pi; R_s^2  z_s) \times \mathrm{exp}(-R/R_s) \times \mathrm{exp}(-|z|/z_s)$$
+where L is the total luminosity of Al26 in the Galaxy, i.e. $L = M/m \times p/&tau;$, with $m = 26 u$ the atomic mass of Al26 nuclei, $p = 0.9976$ is the branching ratio to emit a photon, and $&tau; = 1.05$ Myr is the lifetime of Al26. This gives a quasi-persistent luminosity for a "living" Al26 mass $M$. The values $R_s$ and $z_s$ are the scale radius and scale height, respectively. The radial coordinate is given by $R$, i.e. $R = \sqrt{(x-x_0)^2 + (y-y_0)^2}$, and $z$ is the vertical coordinate, $z = z' - z_0$, where $x_0 = 8.178$, $y_0 = 0$, and $z_0 = -0.019$ are the coordinates of the Galactic center seen from Earth. All distance and size units are in kpc. The line of sight integration is performed so that the flux per pixel (here: cartesian pixel grid with 3 deg resolution) is in units of ph/cm2/s/sr.
 
 Model 1: Al26_R5000_z0200_M30  <br />
 $M = 3$ $M_\odot\$ $\implies L = 4.162 \times 10^{42}$ ph/s $\implies F = 1.278 \times 10^{-3}$ ph/cm2/s <br />
@@ -118,18 +118,7 @@ $M = 6$ $M_\odot\$ $\implies L = 8.324 \times 10^{42}$ ph/s $\implies F = 1.800 
 $R_s = 5.0$ <br />
 $z_s = 1.0$ <br />
 
-The two model with 10 times the ejecta mass, which will result in 10 times the flux:
-Model 1x10:
-M = 30 Msol -> L = 4.162e43 ph/s -> F = 1.278e-2 ph / cm2 / s
-Re = 5.0
-ze = 0.2
-filenames: COSI_DC2_26Al_R5000_z0200_M30_3deg_10xflux
-
-Model 2x10:
-M = 60 Msol -> L = 8.324e43 ph/s -> F = 1.800e-2 ph / cm2 / s
-Re = 5.0
-ze = 1.0
-filenames: COSI_DC2_26Al_R5000_z1000_M60_3deg_10xflux
+The two models with 10 times the ejecta mass (i.e. $M \implies 10 \times M$) result in 10 times the flux.
 
 **Goals:**
 1) Distinction between the two models of roughly equal flux. Can we measure the scale heigt and radius in projected (Galactic) coordinates,
@@ -137,32 +126,25 @@ and can we do a profile likelihood with different 3D models to recover the input
 2) What does the reconstructed image look like, and can we determine the scale dimensions from a fit to the reconstructed image?
 
 ### Ti44
-2023/May/16 Thomas Siegert
-This is the description of the source models for point like 44Ti line emission in the Galaxy at 1157.02 keV
+The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and GRB localization notebooks.
 
-There are four models of supernova remnants with the 44Ti line emission only included.
+**Data Files:** <br /> 
+Ti44_CasA_3months_unbinned_data.fits.gz <br />
+Ti44_CasA_x50_3months_unbinned_data.fits.gz <br />
+Ti44_G1903_3months_unbinned_data.fits.gz <br />
+Ti44_G1903_x10_3months_unbinned_data.fits.gz <br />
+Ti44_SN1987A_3months_unbinned_data.fits.gz <br />
+Ti44_SN1987A_x50_3months_unbinned_data.fits.gz <br />
+Ti44_SNsurprise_3months_unbinned_data.fits.gz <br />
+Ti44_SNsurprise_x50_3months_unbinned_data.fits.gz <br />
 
-The line is a broadened Gaussian with a Doppler broadening of 5000 km/s, corresponding to roughly 8.2 keV (1 sigma value).
+**Input Models:**  <br />
+This is the description of the source models for point like Ti44 line emission in the Galaxy at 1157.02 keV. There are four models of supernova remnants with only the Ti44 line emission included. The line is a broadened Gaussian with a Doppler broadening of 5000 km/s, corresponding to roughly 8.2 keV (1 sigma value). For this data challange, only the fluxes are important, so that we see if we detect the sources. The sources are: Cas A, SN1987A, G1.9+0.3, and SNsurprise.
 
-For this data challange, only the fluxes are important, so that we see if we detect the sources.
-
-The sources are:
-Cas A
-SN1987A
-G1.9+0.3
-Betelgeuse (SNsurprise)
-
-The .source files provided are for the actually expected flux, and 50 times the expected flux for these sources to check
-for us how many photons to expect in the broadened line, and for the data challange to "count" the supernova remnants.
-
-
-Goals: Identification of 44Ti sources in the Milky Way.
-Creating TS maps in only the 44Ti line (probably with an approximated line response).
-Fitting the spectrum of a Gaussian line only at inferred positions.
-
-
-Files:
-The .source files are copied from a template and the names, coordinates, and fluxes are changed accordingly.
+**Goals:** <br />
+1) Identification of 44Ti sources in the Milky Way.
+2) Creating TS maps in only the Ti44 line.
+3) Fitting the spectrum of a Gaussian line at inferred positions.
 
 ## Galactic 
 ## Extragalactic
