@@ -316,4 +316,6 @@ These challenges will require using the tools alreadt available in cosipy to dev
 These challenges will require developing new fundamental tools, which should fit into the cosipy framework.
 1) Allow for time-dependent spectral fits.
 2) Develop tools for time-resolved analysis.
+3) Implement parallel computing.
+4) Implement GPU computing. 
 
