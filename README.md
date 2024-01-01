@@ -209,7 +209,13 @@ Both models represent the INTEGRAL data well but strongly differ at the highest 
 ### GRS 1758-258
 
 **Data Files:** <br />
-missing.
+GRS1758_3months_unbinned_data.fits.gz
+
+**Input Models:**  <br />
+Best fit comptonization model of epoch2 from [Pottschmidt+06](https://arxiv.org/pdf/astro-ph/0509006.pdf).
+
+**Goals:** <br />
+1) Measure spectrum. 
 
 ### PSR J1513-5908 (B1509-58)
 
