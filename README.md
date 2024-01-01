@@ -305,6 +305,15 @@ Need more info.
 2) Measure spectrum and lightcurve. 
 
 ## Extra Challenges
+Below we provide more advanced data challenges for interested users. The ultimate goal of these challenges would be to eventually integrate the methods and tools into the cosipy source code. 
+
 ### Extended 
+These challenges will require using the tools alreadt available in cosipy to develop new functionality. 
+1) Develop method for calculating light curves.
+2) Develop method for calculating SEDs.
+
 ### Advanced
+These challenges will require developing new fundamental tools, which should fit into the cosipy framework.
+1) Allow for time-dependent spectral fits.
+2) Develop tools for time-resolved analysis.
 
