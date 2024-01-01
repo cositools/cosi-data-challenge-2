@@ -31,7 +31,7 @@ Example 6: [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tuto
 
 As a very first step, try working through some of the example notebooks. Specific challenges for the different science topics are described below. You can start with whichever topic you are most interested in. Each challenge will refer you to a specific example notebook that will demonstrate the basic tools needed to complete the respective challenge. If you have completed the main challenges and are interested in further challenges, see the **Extra Challenges** section at the bottom of this page. 
 
-All input models used for the simulation can be found in the DC2 source library of the COSI simulation pipeline, available [here](https://github.com/cositools/cosi-data-challenges/tree/main/cosi_dc/Source_Library/DC2/sources). This includes all the information about the injected sources, and it can be used for checking 
+All input models used for the simulation can be found in the DC2 source library of the COSI simulation pipeline, available [here](https://github.com/cositools/cosi-data-challenges/tree/main/cosi_dc/Source_Library/DC2/sources). This includes all the information about the injected sources, and it can be used for checking the results of the data challenges. 
 
 ## GRBs
  The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
@@ -148,6 +148,47 @@ This is the description of the source models for point like Ti44 line emission i
 4) Identifty the SN surprise. 
 
 ## Galactic 
+
+### CygX1
+
+**Data Files:** <br />
+cygX1_soft_3months_unbinned_data.fits.gz <br />
+cygX1_hard_3months_unbinned_data.fits.gz <br />
+cygX1_hard-soft_3months_unbinned_data.fits.gz <br />
+
+**Input Models:**  <br />
+The two spectral models for Cyg X1 are best fit models of time averaged INTEGRAL data 
+([Cangemi et al 2021](https://ui.adsabs.harvard.edu/abs/2021A%26A...650A..93C/abstract)), 
+given for hard and soft states.
+
+**Goals:** <br />
+1) Check how well COSI can detect the source in the hard/soft state.
+2) Test how well COSI can be used as a monitor to detect a spectral transition between states.
+
+### CygX3
+
+**Data Files:** <br />
+cygX3_FSXR_3months_unbinned_data.fits.gz <br />
+cygX3_transition_3months_unbinned_data.fits.gz <br />
+cygX3_FSXR_54percent-transition_46percent_3months_unbinned_data.fits.gz <br />
+
+**Input Models:**  <br />
+There are 6 different spectral models for Cyg X3 based on time averaged INTEGRAL data 
+in [Cangemi+21](https://www.aanda.org/articles/aa/pdf/2021/01/aa37951-20.pdf), and the average time spent in each state is summarized below:
+
+Quiescent:  6% <br />
+Transition  46% <br />
+FHXR:       10% <br />
+FIM:        22% <br />
+FSXR:       54%  <br /> 
+Hypersoft:  12% <br />
+
+In DC2 we consider that the time is split between the Transition (46%) and FSXR (54%) states. 
+ 
+**Goals:** <br />
+1) Check if COSI can achieve a decent measurement of the average spectrum over its lifetime, 
+and if so, check if we can detect the spectral changes on shorter time scales. 
+
 ## Extragalactic
 
 ### 3C 273
@@ -173,6 +214,18 @@ The spectral data are 3C279 low and high, which represent the low and high state
 
 **Goals:** <br />
 1) Determine if COSI can identify spectral curvature and changes during flares. The low state has two spectral components due to synchrotron self-Compton and external Compton, while the high state is dominated by synchrotron self-Compton.
+
+### 4C+21.35
+
+**Data Files:** <br />
+4C21p35_3months_unbinned_data.fits.gz
+
+**Input Models:**  <br />
+Need more info.
+
+**Goals:** <br />
+1) Detect flaring continuum source. 
+2) Measure spectrum and lightcurve. 
 
 ## Extra Challenges
 ### Extended 
