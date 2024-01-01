@@ -7,7 +7,6 @@ We employed MEGAlib to simululate 3 months of instrumental and astrophysical bac
 <img width="1000"  src="images/bg_components.png">
 </p>
 
-
 ## Input Models
 
 ### Spectra and Source Files 
