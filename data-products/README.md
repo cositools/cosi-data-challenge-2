@@ -29,14 +29,30 @@ The source simulations were ran on NASA's [Discover cluster](https://www.nccs.na
 
 ### Accessing the Data
 
-The data is hosted on wasabi. Files can be downloaded as follows:
+The data is hosted on wasabi. Instruction for downloading the data files are provided below, including command line prompts. Note that for the command line prompts, you must replace the dummmy file name 'your_file' with the actual file that you want to download. 
 
-**Orientation file:** <br />
+**Orientation File:** <br />
 wasabi path: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
 
 Copy from command line:
 <pre>
 os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori --endpoint-url=https://s3.us-west-1.wasabisys.com 20280301_3_month.ori")
+</pre>
+
+**Response Files:** <br />
+wasabi path for detector responses: COSI-SMEX/DC2/Responses <br />
+
+Detector Response: <br />
+SMEXv12.511keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
+SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5.zip <br />
+
+Point Source Response (in Responses/PointSourceResponse): <br />
+psr_gal_511_DC2.h5.gz <br />
+psr_gal_continuum_DC2.h5.zip <br />
+
+Copy from command line:
+<pre>
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Responses/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
 </pre>
 
 **Background Files:** <br />
@@ -59,20 +75,18 @@ secondary_protons_prompt_3months_unbinned_data.fits.gz <br />
 secondary_protons_delayed_3months_unbinned_data.fits.gz <br />
 
 Copy from command line: <br />
-Note: This particular example is for cosmic photons. For other components you'll need to change the file name accordingly. 
 <pre>
-os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Backgrounds/cosmic_photons_3months_unbinned_data.fits.gz --endpoint-url=https://s3.us-west-1.wasabisys.com cosmic_photons_3months_unbinned_data.fits.gz")
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Backgrounds/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
 </pre>
 
 **Source Files:** <br />
 
 wasabi path: COSI-SMEX/DC2/Data/Sources <br />
 
-Sources:
+Sources: <br />
 For DC2 we simulated 30 different sources, running 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page.  
 
 Copy from command line: <br />
-Note: This particular example is for on of the 511 models. For other components you'll need to change the file name accordingly.
 <pre>
-os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Sources/511_thin_diskx10_3months_unbinned_data.fits.gz --endpoint-url=https://s3.us-west-1.wasabisys.com 511_thin_diskx10_3months_unbinned_data.fits.gz")
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Sources/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
 </pre>
