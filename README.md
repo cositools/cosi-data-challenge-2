@@ -145,9 +145,35 @@ This is the description of the source models for point like Ti44 line emission i
 1) Identification of 44Ti sources in the Milky Way.
 2) Creating TS maps in only the Ti44 line.
 3) Fitting the spectrum of a Gaussian line at inferred positions.
+4) Identifty the SN surprise. 
 
 ## Galactic 
 ## Extragalactic
+
+### 3C 273
+
+**Data Files:** <br /> 
+3C273_3months_unbinned_data.fits.gz <br />
+3C273_10xFlux_3months_unbinned_data.fits.gz <br />
+
+**Input Models:**  <br />
+The baseline model can be found in Madsen et al 2015.
+
+**Goals:** <br />
+1) Determine flux and spectral index in the COSI band.
+
+### 3C 279
+
+**Data Files:** <br />
+3C279_low100_3months_unbinned_data.fits.gz <br />
+3C279_high100_3months_unbinned_data.fits.gz <br />
+
+**Input Models:**  <br />
+The spectral data are 3C279 low and high, which represent the low and high states of the source, and the flux is increased by 100x its nominal value.
+
+**Goals:** <br />
+1) Determine if COSI can identify spectral curvature and changes during flares. The low state has two spectral components due to synchrotron self-Compton and external Compton, while the high state is dominated by synchrotron self-Compton.
+
 ## Extra Challenges
 ### Extended 
 ### Advanced
