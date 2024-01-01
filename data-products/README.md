@@ -19,7 +19,7 @@ More specifically, for the source simulations (with *cosima*) we use the *main* 
 ### Data Format
 The data is provided in fits file format, which contains all of the photon information. If you are unfamiliar with analysis of Compton data, we highly recommend reading the [DC1](https://github.com/cositools/cosi-data-challenge-1) introduction page, which covers some of the key topics. In short, each photon event is decribed in terms of four axes: energy, time, compton scattering angle (&phi;), and event circle axis (&Psi; &Chi;). For Compton data, photons occupy what is known as the Compton data space, which is the 3-dimensional space defined by the axes &phi;, &psi;, and &chi;. For the actual analysis, &psi; and &chi; are defined using a healpix grid, allowing us to reduce this to a single dimenion (&Psi; &Chi;), i.e. the healpix pixel number.  
 
-There are fits files for each individual component, for both sources and backgrounds. Each data challenge specifies the specific source files that you'll need. In order to create the dataset for a given data challenge, you will need to combine the source data with the background data. Instructions on how to do this are provided in the example jupyter notebooks, as well as the DataIO example in cosipy. There are 12 individual background components, so these will also need to be combined in order to obtain the total background. A file with the total background is also available. As a simplification, you can also use just the most dominant components.   
+There are fits files for each individual component, for both sources and backgrounds. Each data challenge specifies the specific source files that you'll need. In order to create the dataset for a given data challenge, you will need to combine the source data with the background data. Instructions on how to do this are provided in the example jupyter notebooks, as well as the DataIO example in cosipy. There are 12 individual background components, so these will also need to be combined in order to obtain the total background. A file with the total background is also available. As a simplification, you can also use just the most dominant background components.   
 
 ### Computing Resources 
 
@@ -29,7 +29,7 @@ The source simulations were ran on NASA's [Discover cluster](https://www.nccs.na
 
 ### Accessing the Data
 
-The data is hosted on wasabi. Instruction for downloading the data files are provided below, including command line prompts. Note that for the command line prompts, you must replace the dummmy file name 'your_file' with the actual file that you want to download. 
+The data is hosted on [wasabi](https://console.wasabisys.com/file_manager/cosi-pipeline-public?region=us-west-1). Instruction for downloading the data files are provided below. If you want to download the data directly from wasabi, you will first need to creat a (free) account. However, below we also provide command line prompts that can be used (without an account). Note that for the command line prompts, you must replace the dummmy file name 'your_file' with the actual file that you want to download. 
 
 **Orientation File:** <br />
 wasabi path: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
