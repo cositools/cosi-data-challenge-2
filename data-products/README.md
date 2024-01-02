@@ -29,37 +29,33 @@ The source simulations were ran on NASA's [Discover cluster](https://www.nccs.na
 
 ### Accessing the Data
 
-The data is hosted on [wasabi](https://console.wasabisys.com/file_manager/cosi-pipeline-public?region=us-west-1). Instructions for downloading the data files are provided below. If you want to download the data directly from wasabi, you will first need to creat a (free) account. However, below we also provide command line prompts that can be used (without an account). Note that for the command line prompts, you must replace the dummmy file name 'your_file' with the actual file that you want to download. 
+The data is hosted on [wasabi](https://console.wasabisys.com/file_manager/cosi-pipeline-public?region=us-west-1). Instructions for downloading the data files are provided below. If you want to download the data directly from wasabi, you will first need to creat a (free) account. However, below we also provide command line prompts that can be used (without an account). 
+
+The following command can be used to download files from the command line:
+<pre>
+os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key full/path/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
+</pre>
+Note that you must replace 'full/path/your_file' (after '--key') and 'your_file' (at the end) with the actual path and file. All the needed paths and file names are given below.  
 
 **Orientation File:** <br />
-wasabi path: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
-
-Copy from command line:
-<pre>
-os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori --endpoint-url=https://s3.us-west-1.wasabisys.com 20280301_3_month.ori")
-</pre>
+wasabi path and file: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
 
 **Response Files:** <br />
-wasabi path for responses: COSI-SMEX/DC2/Responses <br />
+wasabi path: COSI-SMEX/DC2/Responses <br />
 
-Detector Response: <br />
+Detector Response Files: <br />
 SMEXv12.511keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
 SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5.zip <br />
 
-Point Source Response (in Responses/PointSourceResponse): <br />
+Point Source Response Files (in Responses/PointSourceResponse): <br />
 psr_gal_511_DC2.h5.gz <br />
 psr_gal_continuum_DC2.h5.zip <br />
-
-Copy from command line:
-<pre>
-os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Responses/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
-</pre>
 
 **Background Files:** <br />
 
 wasabi path: COSI-SMEX/DC2/Data/Backgrounds <br />
 
-Components: <br />
+Files: <br />
 total_bg_3months_unbinned_data.fits.gz <br />
 cosmic_photons_3months_unbinned_data.fits.gz <br />
 albedo_photons_3months_unbinned_data.fits.gz <br />
@@ -74,19 +70,60 @@ NeutronAtm_decay_3months_unbinned_data.fits.gz <br />
 secondary_protons_prompt_3months_unbinned_data.fits.gz <br />
 secondary_protons_delayed_3months_unbinned_data.fits.gz <br />
 
-Copy from command line: <br />
-<pre>
-os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Backgrounds/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
-</pre>
-
 **Source Files:** <br />
 
 wasabi path: COSI-SMEX/DC2/Data/Sources <br />
 
 Sources: <br />
-For DC2 we simulated 30 different sources, running 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page.  
+For DC2 we simulated 30 unique sources, running 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page. For reference, the are also listed below.
 
-Copy from command line: <br />
-<pre>
-os.system("AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key COSI-SMEX/DC2/Data/Sources/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file")
-</pre>
+Files: <br />
+GRB101216721_unbinned_data.fits.gz <br />
+GRB081122614_unbinned_data.fits.gz <br />
+GRB090206620_unbinned_data.fits.gz <br />
+GRB090227772_unbinned_data.fits.gz <br />
+GRB090228204_unbinned_data.fits.gz <br />
+GRB130425327_unbinned_data.fits.gz <br />
+GRB080723557_unbinned_data.fits.gz <br />
+GRB080725541_unbinned_data.fits.gz <br />
+GRB081101491_unbinned_data.fits.gz <br />
+GRB081223419_unbinned_data.fits.gz <br />
+GRB180128215_unbinned_data.fits.gz <br />
+GRB200415A_unbinned_data.fits.gz <br />
+511_thin_diskx10_3months_unbinned_data.fits.gz <br />
+511_thin_disk_3months_unbinned_data.fits.gz <br />
+511_thick_disk10x_3months_unbinned_data.fits.gz <br />
+511_thick_disk_3months_unbinned_data.fits.gz <br />
+511_Testing_3months_unbinned_data.fits.gz <br />
+Al26_R5000_z1000_M60_3months_10xflux_unbinned_data.fits.gz <br />
+Al26_R5000_z1000_M60_3months_unbinned_data.fits.gz <br />
+Al26_R5000_z0200_M30_10xflux_3months_unbinned_data.fits.gz <br />
+Al26_R5000_z0200_M30_3months_unbinned_data.fits.gz <br />
+Ti44_SNsurprise_x50_3months_unbinned_data.fits.gz <br />
+Ti44_SN1987A_x50_3months_unbinned_data.fits.gz <br />
+Ti44_SNsurprise_3months_unbinned_data.fits.gz <br />
+Ti44_SN1987A_3months_unbinned_data.fits.gz <br />
+Ti44_G1903_3months_unbinned_data.fits.gz <br />
+Ti44_G1903_x10_3months_unbinned_data.fits.gz <br />
+Ti44_CasA_x50_3months_unbinned_data.fits.gz <br />
+Ti44_CasA_3months_unbinned_data.fits.gz <br />
+cygX3_FSXR_54percent-transition_46percent_3months_unbinned_data.fits.gz <br />
+cygX3_transition_3months_unbinned_data.fits.gz <br />
+cygX3_FSXR_3months_unbinned_data.fits.gz <br />
+cygX1_hard-soft_3months_unbinned_data.fits.gz <br />
+cygX1_soft_3months_unbinned_data.fits.gz <br />
+cygX1_hard_3months_unbinned_data.fits.gz <br />
+crab_3months_unbinned_data.fits.gz <br />
+Crab_DC2_3months_unbinned_data.fits.gz <br />
+crab_no_Earth_occultation_3months_unbinned_data.fits.gz <br />
+PSRJ1846_3months_unbinned_data.fits.gz <br />
+PSRB1509_3months_unbinned_data.fits.gz <br />
+GRS1758_3months_unbinned_data.fits.gz <br />
+1E1740_two_components_3months_unbinned_data.fits.gz <br />
+1E1740_compton-powerlaw_3months_unbinned_data.fits.gz <br />
+3C279_low100_3months_unbinned_data.fits.gz <br />
+3C279_high100_3months_unbinned_data.fits.gz <br />
+4C21p35_3months_unbinned_data.fits.gz <br />
+3C273_10xFlux_3months_unbinned_data.fits.gz <br />
+3C273_3months_unbinned_data.fits.gz <br />
+cenA_3months_unbinned_data.fits.gz <br />
