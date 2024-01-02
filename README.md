@@ -61,10 +61,10 @@ GRB200415A_unbinned_data.fits.gz <br />
 Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB lightcurves are downloaded directly from GBM. Short GRB realistic lightcurves are downloaded from GBM & binned using Bayesian blocks. Short GRB constant lightcurves are constant over the duration of the GRB. Magnetar giant flare lightcurves are downloaded from GBM & binned using Bayesian blocks. GRBs occur randomly in time throughout the duration of the 3 month exposure. GRB positions were chosen to have incidence angles between 0 and 30 degrees with a range of azimuthal angles.
 
 **Goals:**
-1) Determine time of each event and create lightcurve
-2) Determine source locations
-3) Fit spectra
-4) Identify event type (GRB vs MGF)
+1) Determine time of each event and create lightcurve.
+2) Determine source locations.
+3) Fit spectra.
+4) Identify event type (GRB vs MGF).
 
 ## Positrons
 The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and 511 spectral fit notebooks. 
@@ -86,9 +86,9 @@ Each spatial component has two spectral components: 1) A line at 511 keV. This h
 Both models are included at 1x and 10x nominal flux.
 
 **Goals:**
-1) Make full sky image of 511 keV (image deconvolution)
-2) Determine scale height of disk emission (model fitting)
-3) Extract the spectra of the bulge emission
+1) Make full sky image of 511 keV. 
+2) Determine scale height of disk emission.
+3) Extract the spectra of the bulge emission.
 
 ## Nucleosynthesis 
 
@@ -103,7 +103,7 @@ Al26_R5000_z0200_M30_10xflux_3months_unbinned_data.fits.gz <br />
 
 **Input Models:**  <br />
 
-This is the description of the source model for diffuse Al26 line emission in the Galaxy at 1808.63 keV. There are two realisations from the same doubly exponential disk model. The three-dimensional model is
+There are two realisations from the same doubly exponential disk model for Al26 line emission (1808.63 keV) in the Galaxy. The three-dimensional model is
 
 $$&rho;(R,z,&phi;) = L / (4 &pi; R_s^2  z_s) \times \mathrm{exp}(-R/R_s) \times \mathrm{exp}(-|z|/z_s)$$
 where L is the total luminosity of Al26 in the Galaxy, i.e. $L = M/m \times p/&tau;$, with $m = 26 u$ the atomic mass of Al26 nuclei, $p = 0.9976$ is the branching ratio to emit a photon, and $&tau; = 1.05$ Myr is the lifetime of Al26. This gives a quasi-persistent luminosity for a "living" Al26 mass $M$. The values $R_s$ and $z_s$ are the scale radius and scale height, respectively. The radial coordinate is given by $R$, i.e. $R = \sqrt{(x-x_0)^2 + (y-y_0)^2}$, and $z$ is the vertical coordinate, $z = z' - z_0$, where $x_0 = 8.178$, $y_0 = 0$, and $z_0 = -0.019$ are the coordinates of the Galactic center seen from Earth. All distance and size units are in kpc. The line of sight integration is performed so that the flux per pixel (here: cartesian pixel grid with 3 deg resolution) is in units of ph/cm2/s/sr.
@@ -139,10 +139,10 @@ Ti44_SNsurprise_3months_unbinned_data.fits.gz <br />
 Ti44_SNsurprise_x50_3months_unbinned_data.fits.gz <br />
 
 **Input Models:**  <br />
-This is the description of the source models for point like Ti44 line emission in the Galaxy at 1157.02 keV. There are four models of supernova remnants with only the Ti44 line emission included. The line is a broadened Gaussian with a Doppler broadening of 5000 km/s, corresponding to roughly 8.2 keV (1 sigma value). For this data challange, only the fluxes are important, so that we see if we detect the sources. The sources are: Cas A, SN1987A, G1.9+0.3, and SNsurprise.
+There are four models of supernova remnants with only the Ti44 line emission (1157.02 keV) included. The line is a broadened Gaussian with a Doppler broadening of 5000 km/s, corresponding to roughly 8.2 keV (1 sigma value). For this data challange, only the fluxes are important, so that we see if we detect the sources. The sources are: Cas A, SN1987A, G1.9+0.3, and SNsurprise.
 
 **Goals:** <br />
-1) Identification of 44Ti sources in the Milky Way.
+1) Identification of Ti44 sources in the Milky Way.
 2) Creating TS maps in only the Ti44 line.
 3) Fitting the spectrum of a Gaussian line at inferred positions.
 4) Identifty the SN surprise. 
@@ -314,7 +314,7 @@ Need more info.
 Below we provide more advanced data challenges for interested users. The ultimate goal of these challenges would be to eventually integrate the methods and tools into the cosipy source code. 
 
 ### Extended 
-These challenges will require using the tools alreadt available in cosipy to develop new functionality. 
+These challenges will require using the tools already available in cosipy to develop new functionality. 
 1) Develop method for calculating light curves.
 2) Develop method for calculating SEDs.
 
