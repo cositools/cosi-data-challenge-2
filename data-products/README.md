@@ -29,7 +29,7 @@ The source simulations were ran on NASA's [Discover cluster](https://www.nccs.na
 
 ### Accessing the Data
 
-The data is hosted on [wasabi](https://console.wasabisys.com/file_manager/cosi-pipeline-public?region=us-west-1). If you want to download the data directly from wasabi, you will first need to creat a (free) account. However, the data can also be downloaded using command line prompts (without an account). 
+The data is hosted on [wasabi](https://console.wasabisys.com/file_manager/cosi-pipeline-public?region=us-west-1). If you want to download the data directly from wasabi, you will first need to creat a (free) account. However, the data can also be downloaded using a command line prompt (without an account). 
 
 The following can be used to download files from the command line:
 <pre>
