@@ -36,6 +36,11 @@ As a very first step, try working through some of the example notebooks. Specifi
 
 All input models used for the simulations can be found in the DC2 source library of the COSI simulation pipeline, available [here](https://github.com/cositools/cosi-data-challenges/tree/main/cosi_dc/Source_Library/DC2/sources). This includes all the information about the injected sources, and it can be used for checking the results of the data challenges. 
 
+**Orientation and Background Files:** <br />
+All challenges use the same files: <br />
+orientation file: 20280301_3_month.ori <br />
+background file: total_bg_3months_unbinned_data.fits.gz
+
 ## GRBs
  The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
 
@@ -73,6 +78,8 @@ Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB
 The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and 511 spectral fit notebooks. 
 
 **Data Files:** <br />
+SMEXv12.511keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
+psr_gal_511_DC2.h5 <br />
 511_thick_disk_3months_unbinned_data.fits.gz <br />
 511_thick_disk10x_3months_unbinned_data.fits.gz <br />
 511_thin_disk_3months_unbinned_data.fits.gz <br />
@@ -152,6 +159,9 @@ There are four models of supernova remnants with only the Ti44 line emission (11
 
 ## Galactic 
 The tools needed to complete the Galactic challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab), [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning), GRB localization notebooks.
+
+**All challenges should use the same detector response file:**
+SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5
 
 ### CygX1
 
@@ -276,6 +286,9 @@ This is the same input model that was used for DC1.
 
 ## Extragalactic
 The tools needed to complete the Extragalactic challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) notebook.
+
+**All challenges should use the same detector response file:**
+SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5
 
 ### 3C 273
 
