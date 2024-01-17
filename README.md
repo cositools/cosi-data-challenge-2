@@ -85,6 +85,8 @@ psr_gal_511_DC2.h5 <br />
 511_thin_disk_3months_unbinned_data.fits.gz <br />
 511_thin_diskx10_3months_unbinned_data.fits.gz <br />
 
+Note: binned data products are also available for the 511 components. The file names are the same as listed above, but with "binned" instead of "unbinnned". The binning matches the detector response, and has a time bin size of 7200 seconds. 
+
 **Input Models:** 
 
 Spatial: <br />
