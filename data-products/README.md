@@ -93,10 +93,15 @@ GRB081223419_unbinned_data.fits.gz <br />
 GRB180128215_unbinned_data.fits.gz <br />
 GRB200415A_unbinned_data.fits.gz <br />
 511_thin_diskx10_3months_unbinned_data.fits.gz <br />
+511_thin_diskx10_3months_binned_data.fits.gz <br />
 511_thin_disk_3months_unbinned_data.fits.gz <br />
+511_thin_disk_3months_binned_data.fits.gz <br />
 511_thick_disk10x_3months_unbinned_data.fits.gz <br />
+511_thick_disk10x_3months_binned_data.fits.gz <br />
 511_thick_disk_3months_unbinned_data.fits.gz <br />
+511_thick_disk_3months_binned_data.fits.gz <br />
 511_Testing_3months_unbinned_data.fits.gz <br />
+511_Testing_3months_binned_data.fits.gz <br />
 Al26_R5000_z1000_M60_3months_10xflux_unbinned_data.fits.gz <br />
 Al26_R5000_z1000_M60_3months_unbinned_data.fits.gz <br />
 Al26_R5000_z0200_M30_10xflux_3months_unbinned_data.fits.gz <br />
