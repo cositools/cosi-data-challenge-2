@@ -97,10 +97,12 @@ Each spatial component has two spectral components: 1) A line at 511 keV. This h
 
 Both models are included at 1x and 10x nominal flux.
 
+Note: For the DC2 analysis we will only consider the line emission. The ortho-positronium continuum will be included starting with DC3. 
+
 **Goals:**
 1) Make full sky image of 511 keV. 
 2) Determine scale height of disk emission.
-3) Extract the spectra of the bulge emission.
+3) Extract the line spectra of the bulge and disk emissions.
 
 ## Nucleosynthesis 
 
