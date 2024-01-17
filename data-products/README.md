@@ -79,7 +79,7 @@ wasabi path: COSI-SMEX/DC2/Data/Sources <br />
 Sources: <br />
 For DC2 we simulated 30 unique sources, running 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page. For reference, they are also listed below.
 
-Files: <br />
+Unbinned Files: <br />
 GRB101216721_unbinned_data.fits.gz <br />
 GRB081122614_unbinned_data.fits.gz <br />
 GRB090206620_unbinned_data.fits.gz <br />
@@ -93,15 +93,10 @@ GRB081223419_unbinned_data.fits.gz <br />
 GRB180128215_unbinned_data.fits.gz <br />
 GRB200415A_unbinned_data.fits.gz <br />
 511_thin_diskx10_3months_unbinned_data.fits.gz <br />
-511_thin_diskx10_3months_binned_data.fits.gz <br />
 511_thin_disk_3months_unbinned_data.fits.gz <br />
-511_thin_disk_3months_binned_data.fits.gz <br />
 511_thick_disk10x_3months_unbinned_data.fits.gz <br />
-511_thick_disk10x_3months_binned_data.fits.gz <br />
 511_thick_disk_3months_unbinned_data.fits.gz <br />
-511_thick_disk_3months_binned_data.fits.gz <br />
 511_Testing_3months_unbinned_data.fits.gz <br />
-511_Testing_3months_binned_data.fits.gz <br />
 Al26_R5000_z1000_M60_3months_10xflux_unbinned_data.fits.gz <br />
 Al26_R5000_z1000_M60_3months_unbinned_data.fits.gz <br />
 Al26_R5000_z0200_M30_10xflux_3months_unbinned_data.fits.gz <br />
@@ -134,3 +129,14 @@ GRS1758_3months_unbinned_data.fits.gz <br />
 3C273_10xFlux_3months_unbinned_data.fits.gz <br />
 3C273_3months_unbinned_data.fits.gz <br />
 cenA_3months_unbinned_data.fits.gz <br />
+
+Binned Files: <br />
+511_thin_diskx10_3months_binned_data.fits.gz <br />
+511_thin_disk_3months_binned_data.fits.gz <br />
+511_thick_disk10x_3months_binned_data.fits.gz <br />
+511_thick_disk_3months_binned_data.fits.gz <br />
+511_Testing_3months_binned_data.fits.gz <br />
+Al26_R5000_z1000_M60_3months_10xflux_binned_data.fits.gz <br />
+Al26_R5000_z1000_M60_3months_binned_data.fits.gz <br />
+Al26_R5000_z0200_M30_10xflux_3months_binned_data.fits.gz <br />
+Al26_R5000_z0200_M30_3months_binned_data.fits.gz <br />
