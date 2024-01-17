@@ -107,7 +107,11 @@ Both models are included at 1x and 10x nominal flux.
 ### Al26
 The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and 511 spectral fit notebooks. 
 
+Note: binned data products are also available for the Al26 components. The file names are the same as listed above, but with "binned" instead of "unbinnned". The binning matches the detector response, and has a time bin size of 7200 seconds. 
+
 **Data Files:** <br /> 
+SMEXv12.1809keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
+psr_Al26_DC2.h5 <br />
 Al26_R5000_z1000_M60_3months_unbinned_data.fits.gz <br /> 
 Al26_R5000_z1000_M60_3months_10xflux_unbinned_data.fits.gz <br />
 Al26_R5000_z0200_M30_3months_unbinned_data.fits.gz <br />
