@@ -25,12 +25,13 @@ For analyzing data in DC2, the backgrounds are modeled using the actual injected
 ## Data Challanges
 We have created example jupyter notebooks demonstrating all of the tools that will be needed to complete this year's data challenges. They are available as part of the cosipy release, and listed below: <br /> 
 
-Example 1: GRB localization <br />
-Example 2: [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) <br />
-Example 3: [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) <br />
-Example 4: 511 spectral fit <br />
-Example 5: [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning) <br />
-Example 6: [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) <br />
+Example 1: [dataIO](https://github.com/cositools/cosipy/tree/main/docs/tutorials/DataIO) <br />
+Example 2: GRB localization <br />
+Example 3: [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) <br />
+Example 4: [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) <br />
+Example 5: 511 spectral fit <br />
+Example 6: [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning) <br />
+Example 7: [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) <br />
 
 As a very first step, try working through some of the example notebooks. Specific challenges for the different science topics are described below. You can start with whichever topic you are most interested in. Each challenge will refer you to a specific example notebook that will demonstrate the basic tools needed to complete the respective challenge. If you have completed the main challenges and are interested in further challenges, see the **Extra Challenges** section at the bottom of this page. 
 
@@ -44,33 +45,29 @@ background file: total_bg_3months_unbinned_data.fits.gz
 ## GRBs
  The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
 
+The burst time for each GRB is specified with the data file. This is the minimum information needed to complete the challenges. For the background, you should use some time window around the burst. An example of how to make a time selection is shown in the [dataIO example](https://github.com/cositools/cosipy/tree/main/docs/tutorials/DataIO).  
+
 **Data Files:** <br />
-3 long GRBs with realistic lightcurves: <br /> 
-GRB080723557_unbinned_data.fits.gz  <br />
-GRB090206620_unbinned_data.fits.gz <br />
-GRB130425327_unbinned_data.fits.gz <br />
-
-3 short GRBs with realistic lightcurves: <br />
-GRB090227772_unbinned_data.fits.gz <br />
-GRB090228204_unbinned_data.fits.gz <br />
-GRB101216721_unbinned_data.fits.gz <br />
-
-4 short GRBs with constant lightcurves: <br />
-GRB080725541_unbinned_data.fits.gz <br />
-GRB081101491_unbinned_data.fits.gz <br />
-GRB081122614_unbinned_data.fits.gz <br />
-GRB081223419_unbinned_data.fits.gz <br />
-
-2 magnetar giant flares (MGFs): <br /> 
-GRB180128215_unbinned_data.fits.gz <br />
-GRB200415A_unbinned_data.fits.gz <br />
+SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5
+GRB080723557_unbinned_data.fits.gz (t = 1836758310.0 s)  <br />
+GRB090206620_unbinned_data.fits.gz (t = 1842597410.0 s) <br />
+GRB130425327_unbinned_data.fits.gz (t = 1842417609.0 s) <br />
+GRB090227772_unbinned_data.fits.gz (t = 1840166979.0 s) <br />
+GRB090228204_unbinned_data.fits.gz (t = 1841042855.0 s) <br />
+GRB101216721_unbinned_data.fits.gz (t = 1841710622.0 s) <br />
+GRB080725541_unbinned_data.fits.gz (t = 1837379302.0 s) <br />
+GRB081101491_unbinned_data.fits.gz (t = 1837992600.0 s) <br />
+GRB081122614_unbinned_data.fits.gz (t = 1838665305.0 s) <br />
+GRB081223419_unbinned_data.fits.gz (t = 1839467340.0 s) <br />
+GRB180128215_unbinned_data.fits.gz (t = 1835487315.119 s) <br />
+GRB200415A_unbinned_data.fits.gz (t = 1835487385.0265 s) <br />
 
 **Input Models:** <br />
 Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB lightcurves are downloaded directly from GBM. Short GRB realistic lightcurves are downloaded from GBM & binned using Bayesian blocks. Short GRB constant lightcurves are constant over the duration of the GRB. Magnetar giant flare lightcurves are downloaded from GBM & binned using Bayesian blocks. GRBs occur randomly in time throughout the duration of the 3 month exposure. GRB positions were chosen to have incidence angles between 0 and 30 degrees with a range of azimuthal angles.
 
 **Goals:**
-1) Determine time of each event and create lightcurve.
-2) Determine source locations.
+1) Determine source locations.
+2) Determine time interval of each event and create lightcurve.
 3) Fit spectra.
 4) Identify event type (GRB vs MGF).
 
@@ -139,7 +136,7 @@ $z_s = 1.0$ <br />
 The two models with 10 times the ejecta mass (i.e. $M \implies 10 \times M$) result in 10 times the flux.
 
 **Goals:**
-1) Distinction between the two models of roughly equal flux. Can we measure the scale heigt and radius in projected (Galactic) coordinates,
+1) Distinction between the two models of roughly equal flux. Can we measure the scale height and radius in projected (Galactic) coordinates,
 and can we do a profile likelihood with different 3D models to recover the input scale dimensions?
 2) What does the reconstructed image look like, and can we determine the scale dimensions from a fit to the reconstructed image?
 
@@ -342,11 +339,13 @@ Below we provide more advanced data challenges for interested users. The ultimat
 These challenges will require using the tools already available in cosipy to develop new functionality. 
 1) Develop method for calculating light curves.
 2) Develop method for calculating SEDs.
+3) Example notebook demonstrating simultaneous fit of multiple point sources. 
 
 ### Advanced
 These challenges will require developing new fundamental tools, which should fit into the cosipy framework.
 1) Allow for time-dependent spectral fits.
 2) Develop tools for time-resolved analysis.
 3) Implement parallel computing.
-4) Implement GPU computing. 
+4) Implement GPU computing.
+5) Minimize memory usage. 
 
