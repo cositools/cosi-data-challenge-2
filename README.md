@@ -48,7 +48,7 @@ background file: total_bg_3months_unbinned_data.fits.gz
 The burst time for each GRB is specified with the data file. This is the minimum information needed to complete the challenges. For the background, you should use some time window around the burst. An example of how to make a time selection is shown in the [dataIO example](https://github.com/cositools/cosipy/tree/main/docs/tutorials/DataIO).  
 
 **Data Files:** <br />
-SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5
+SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5 <br />
 GRB080723557_unbinned_data.fits.gz (t = 1836758310.0 s)  <br />
 GRB090206620_unbinned_data.fits.gz (t = 1842597410.0 s) <br />
 GRB130425327_unbinned_data.fits.gz (t = 1842417609.0 s) <br />
