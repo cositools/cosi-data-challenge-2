@@ -76,10 +76,10 @@ secondary_protons_prompt_3months_unbinned_data.fits.gz <br />
 secondary_protons_delayed_3months_unbinned_data.fits.gz <br />
 
 Binned Files: <br />
-total_bg_3months_binned_for_511.fits.gz <br />
-total_bg_3months_binned_for_Al26.fits.gz <br />
-total_bg_3months_binned_for_Ti44.fits.gz <br />
-total_bg_3months_binned_for_continuum.fits.gz <br />
+total_bg_3months_binned_for_511.hdf5 <br />
+total_bg_3months_binned_for_Al26.hdf5 <br />
+total_bg_3months_binned_for_Ti44.hdf5 <br />
+total_bg_3months_binned_for_continuum.hdf5 <br />
 
 **Source Files:** <br />
 
@@ -140,12 +140,12 @@ GRS1758_3months_unbinned_data.fits.gz <br />
 cenA_3months_unbinned_data.fits.gz <br />
 
 Binned Files: <br />
-511_thin_diskx10_3months_binned_data.fits.gz <br />
-511_thin_disk_3months_binned_data.fits.gz <br />
-511_thick_disk10x_3months_binned_data.fits.gz <br />
-511_thick_disk_3months_binned_data.fits.gz <br />
-511_Testing_3months_binned_data.fits.gz <br />
-Al26_R5000_z1000_M60_3months_10xflux_binned_data.fits.gz <br />
-Al26_R5000_z1000_M60_3months_binned_data.fits.gz <br />
-Al26_R5000_z0200_M30_10xflux_3months_binned_data.fits.gz <br />
-Al26_R5000_z0200_M30_3months_binned_data.fits.gz <br />
+511_thin_diskx10_3months_binned_data.hdf5 <br />
+511_thin_disk_3months_binned_data.hdf5 <br />
+511_thick_disk10x_3months_binned_data.hdf5 <br />
+511_thick_disk_3months_binned_data.hdf5 <br />
+511_Testing_3months_binned_data.hdf5 <br />
+Al26_R5000_z1000_M60_3months_10xflux_binned_data.hdf5 <br />
+Al26_R5000_z1000_M60_3months_binned_data.hdf5 <br />
+Al26_R5000_z0200_M30_10xflux_3months_binned_data.hdf5 <br />
+Al26_R5000_z0200_M30_3months_binned_data.hdf5 <br />
