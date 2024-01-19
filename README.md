@@ -12,7 +12,7 @@ The input models and challenges for DC2 were provided by the COSI science teams.
 In summary, to get started with DC2, install cosipy, familiarize yourself with the data products, and then start working through the data challenges, as described below. 
 
 ## System Requirements
-One of our goals in developing cosipy is to make it easily accesible to all users. **All of the data challenges in DC2 should be doable on a laptop with at least 16 GB of RAM**. The biggest memory limitation will likely come from binning the data. We are still working on optimizing the code, and so please let us know if you are running into memory issues. 
+One of our goals in developing cosipy is to make it easily accesible to all users. **All of the data challenges in DC2 should be doable on a laptop with at least 16 GB of RAM**. The biggest memory limitation will likely come from combining and binning the data. We are still working on optimizing the code, and so please let us know if you are running into memory issues. 
 
 ## Getting Help
 Please submit a new issue in the [cosipy](https://github.com/cositools/cosipy) git repository if you have issues with the code. If you have general feedback, or need further assistance, please reach out to the COSI Data Challenge team lead, Chris Karwin ([christopher.m.karwin@nasa.gov](mailto:christopher.m.karwin@nasa.gov)), the cosipy implementation lead, Israel Martinez-Castellanos ([israel.martinezcastellanos@nasa.gov](israel.martinezcastellanos@nasa.gov)), and the pipeline development lead Carolyn Kierans ([carolyn.a.kierans@nasa.gov](carolyn.a.kierans@nasa.gov)).
