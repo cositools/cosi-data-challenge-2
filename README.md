@@ -26,7 +26,7 @@ For analyzing data in DC2, the backgrounds are modeled using the actual injected
 We have created example jupyter notebooks demonstrating all of the tools that will be needed to complete this year's data challenges. They are available as part of the cosipy release, and listed below: <br /> 
 
 Example 1: [dataIO](https://github.com/cositools/cosipy/tree/main/docs/tutorials/DataIO) <br />
-Example 2: GRB localization <br />
+Example 2: [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) <br />
 Example 3: [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) <br />
 Example 4: [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) <br />
 Example 5: 511 spectral fit <br />
@@ -45,7 +45,7 @@ background file: total_bg_3months_unbinned_data.fits.gz
 ## GRBs
  The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
 
-The burst time for each GRB is specified with the data file. This is the minimum information needed to complete the challenges. For the background, you should use some time window around the burst. An example of how to make a time selection is shown in the [dataIO example](https://github.com/cositools/cosipy/tree/main/docs/tutorials/DataIO).  
+The burst time for each GRB is specified with the data file. This is the minimum information needed to complete the challenges.   
 
 **Data Files:** <br />
 SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5 <br />
@@ -164,7 +164,7 @@ There are four models of supernova remnants with only the Ti44 line emission (11
 4) Identifty the SN surprise. 
 
 ## Galactic 
-The tools needed to complete the Galactic challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab), [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning), and GRB localization notebooks.
+The tools needed to complete the Galactic challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab), [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning), and [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) notebooks.
 
 **All challenges should use the same detector response file:**
 SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5
