@@ -43,7 +43,7 @@ orientation file: 20280301_3_month.ori <br />
 background file: total_bg_3months_unbinned_data.fits.gz
 
 ## GRBs
- The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and GRB localization examples. 
+ The tools needed to complete these challenges are demonstrated in the [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) and [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) examples. 
 
 The burst time for each GRB is specified with the data file. This is the minimum information needed to complete the challenges.   
 
@@ -141,7 +141,7 @@ and can we do a profile likelihood with different 3D models to recover the input
 2) What does the reconstructed image look like, and can we determine the scale dimensions from a fit to the reconstructed image?
 
 ### Ti44
-The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and GRB localization notebooks.
+The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) notebooks.
 
 **Data Files:** <br /> 
 psr_gal_Ti44_DC2.h5 <br />
