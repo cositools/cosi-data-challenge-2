@@ -48,12 +48,15 @@ wasabi path: COSI-SMEX/DC2/Responses <br />
 Detector Response Files: <br />
 SMEXv12.511keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
 SMEXv12.1809keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
+SMEXv12.44Ti.HEALPix04.E_1143_1171keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
+SMEXv12.44Ti.HEALPix04.E_1150_1164keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
 SMEXv12.Continuum.HEALPixO3_10bins_log_flat.binnedimaging.imagingresponse.nonsparse_nside8.area.good_chunks_unzip.h5.zip <br />
 
 Point Source Response Files (in Responses/PointSourceResponse): <br />
 psr_gal_511_DC2.h5.gz <br />
 psr_gal_Al26_DC2.h5.gz <br />
-psr_gal_Ti44_DC2.h5.gz <br />
+psr_gal_Ti44_E_1143_1171keV_DC2.h5.gz <br />
+psr_gal_Ti44_E_1150_1164keV_DC2.h5.gz <br />
 psr_gal_continuum_DC2.h5.zip <br />
 
 **Background Files:** <br />
@@ -78,7 +81,8 @@ secondary_protons_delayed_3months_unbinned_data.fits.gz <br />
 Binned Files: <br />
 total_bg_3months_binned_for_511.hdf5 <br />
 total_bg_3months_binned_for_Al26.hdf5 <br />
-total_bg_3months_binned_for_Ti44.hdf5 <br />
+total_bg_3months_binned_for_Ti44_E_1143_1171keV.hdf5 <br />
+total_bg_3months_binned_for_Ti44_E_1150_1164keV.hdf5 <br />
 total_bg_3months_binned_for_continuum.hdf5 <br />
 
 **Source Files:** <br />
