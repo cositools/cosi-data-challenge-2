@@ -144,7 +144,10 @@ and can we do a profile likelihood with different 3D models to recover the input
 The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) notebooks.
 
 **Data Files:** <br /> 
-psr_gal_Ti44_DC2.h5 <br />
+SMEXv12.44Ti.HEALPix04.E_1143_1171keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5
+SMEXv12.44Ti.HEALPix04.E_1150_1164keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5
+psr_gal_Ti44_E_1143_1171keV_DC2.h5 <br />
+psr_gal_Ti44_E_1150_1164keV_DC2.h5 <br />
 Ti44_CasA_3months_unbinned_data.fits.gz <br />
 Ti44_CasA_x50_3months_unbinned_data.fits.gz <br />
 Ti44_G1903_3months_unbinned_data.fits.gz <br />
@@ -153,6 +156,8 @@ Ti44_SN1987A_3months_unbinned_data.fits.gz <br />
 Ti44_SN1987A_x50_3months_unbinned_data.fits.gz <br />
 Ti44_SNsurprise_3months_unbinned_data.fits.gz <br />
 Ti44_SNsurprise_x50_3months_unbinned_data.fits.gz <br />
+
+Note: There are two different response files with a slightly different width of the energy bin (one being more broad than the other). An additional goal of this data challenge is to determine which response file works better in the analysis.   
 
 **Input Models:**  <br />
 There are four models of supernova remnants with only the Ti44 line emission (1157.02 keV) included. The line is a broadened Gaussian with a Doppler broadening of 5000 km/s, corresponding to roughly 8.2 keV (1 sigma value). For this data challange, only the fluxes are important, so that we see if we detect the sources. The sources are: Cas A, SN1987A, G1.9+0.3, and SNsurprise.
