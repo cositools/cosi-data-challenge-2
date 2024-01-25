@@ -29,7 +29,7 @@ Example 1: [dataIO](https://github.com/cositools/cosipy/tree/main/docs/tutorials
 Example 2: [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) <br />
 Example 3: [GRB spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/grb) <br />
 Example 4: [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) <br />
-Example 5: 511 spectral fit <br />
+Example 5: [511 spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/extended_source_fit) <br />
 Example 6: [Crab imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/Crab/ScAttBinning) <br />
 Example 7: [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) <br />
 
@@ -72,7 +72,7 @@ Spectra are either Band function or Comptonized spectrum fits from GBM. Long GRB
 4) Identify event type (GRB vs MGF).
 
 ## Positrons
-The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and 511 spectral fit notebooks. 
+The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and [511 spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/extended_source_fit) notebooks. 
 
 **Data Files:** <br />
 SMEXv12.511keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
@@ -104,7 +104,7 @@ Note: For the DC2 analysis we will only consider the line emission. The ortho-po
 ## Nucleosynthesis 
 
 ### Al26
-The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and 511 spectral fit notebooks. 
+The tools needed to complete these challenges are demonstrated in the [511 imaging](https://github.com/cositools/cosipy/tree/main/docs/tutorials/image_deconvolution/511keV/ScAttBinning) and [511 spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/extended_source_fit) notebooks. 
 
 **Data Files:** <br /> 
 SMEXv12.1809keV.HEALPixO4.binnedimaging.imagingresponse.nonsparse_nside16.area.h5 <br />
@@ -339,7 +339,8 @@ Below we provide more advanced data challenges for interested users. The ultimat
 These challenges will require using the tools already available in cosipy to develop new functionality. 
 1) Develop method for calculating light curves.
 2) Develop method for calculating SEDs.
-3) Example notebook demonstrating simultaneous fit of multiple point sources. 
+3) Example notebook demonstrating simultaneous fit of multiple point sources.
+4) Develop source injector. 
 
 ### Advanced
 These challenges will require developing new fundamental tools, which should fit into the cosipy framework.
