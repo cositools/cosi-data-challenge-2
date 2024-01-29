@@ -1,6 +1,6 @@
 # Introduction to cosipy
 
-The cosipy library is [COSI](https://cosi.ssl.berkeley.edu)'s high-level analysis software. It allows you to extract imaging and spectral information from the data, as well as to perform statistical model comparisons. The cosipy product are meant to be ready for interpretation.
+The cosipy library is [COSI](https://cosi.ssl.berkeley.edu)'s high-level analysis software. It allows you to extract imaging and spectral information from the data, as well as to perform statistical model comparisons. The cosipy products are meant to be ready for interpretation.
 
 The main repository is hosted in https://github.com/cositools/cosipy
 
@@ -10,7 +10,7 @@ For the cosipy installation and usage instructions please refer to the main [cos
 
 ## cosipy and cositools
 
-COSItools is the collection of all COSI data-analysis tools, including raw data formating, calibration, reconstructions, and simulations. The cosipy library is the final of all the steps in the pipeline, shown in the following diagram as the "High-level Data Abalysis" block.
+COSItools is the collection of all COSI data-analysis tools, including raw data formating, calibration, reconstructions, and simulations. The cosipy library is the final of all the steps in the pipeline, shown in the following diagram as the "High-level Data Analysis" block
 
 <img src="figures/cosi-pipelines-diagram.png" alt="the full COSI pipelines" width="500"/>
 
@@ -20,7 +20,7 @@ The cosipy library is open-source and written in Python.
 
 ## The cosipy analysis
 
-Cosipy uses a likelihood-based forward-folding technique. This means that different source hypothesis are convolved with the instrument response in order to obtain the expected data. The expectation is directly compared to the observed data to evaluate the likelihood that the source hypothesis explains the observations, and therefore find the best. In the following section we explain what we actually mean by all of this! 
+Cosipy uses a likelihood-based forward-folding technique. This means that different source hypotheses are convolved with the instrument response in order to obtain the expected data. The expectation is directly compared to the observed data to evaluate the likelihood that the source hypothesis explains the observations, and therefore find the best model. In the following section we explain what we actually mean by all of this! 
 
 ### Likelihood analysis
 
@@ -30,9 +30,9 @@ Every analyses in cosipy is based on the following likelihood function:
 
 A way to interpret it is that the likelihood of a given physical model given the observed data equals the probability of obtaining the particular observed data sample given the physical model.
 
-In our case, the physical sky model is composed by all the source parameters that we want to fit. For example, the flux of various sources, their spectral index, sky location, background level, etc. The parameters can also be flux values on each location of the discretized sphere, as is the case when we do imaging.
+In our case, the physical sky model is composed by all the source parameters considered by the user. For example, the flux of various sources, their spectral index, sky location, background level, etc. The parameters can also be flux values on each location of the discretized sphere, as is the case when we do imaging.
 
-The observed data corresponds to the measured counts on each bin. In COSI we bin the data on measured energy, and the Compton Data Space (see [below](#anchor_CDS)). These are integer values, are are typically sparse ---i.e. most bins are empty.
+The observed data corresponds to the measured counts in each bin. In COSI we bin the data in measured energy, and the Compton Data Space (see [below](#anchor_CDS)). These are integer values, are are typically sparse ---i.e. most bins are empty.
 
 The expected counts are the number of observed counts you would expect from simulation given a set of sky model parameters. This allows us to compare directly to the data, apples with apples. As opposed to the observed counts, these are not integer but floating point numbers, since they correspond to the _average_ number of you would observe. There is one such number per bin in the data space, and typically it is not sparse --i.e. you can expect something close to 0, but not exactly 0, unless the bin is actually unphysical. In the next [section](#anchor_rsp_intro) we will see how to obtain them.
 
