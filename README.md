@@ -141,7 +141,7 @@ and can we do a profile likelihood with different 3D models to recover the input
 2) What does the reconstructed image look like, and can we determine the scale dimensions from a fit to the reconstructed image?
 
 ### Ti44
-The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and [GRB localization](https://github.com/cositools/cosipy/blob/main/docs/tutorials/Parallel_TS_map_computation.ipynb) notebooks.
+The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and [GRB localization](https://github.com/cositools/cosipy/tree/main/docs/tutorials/ts_map) notebooks.
 
 **Data Files:** <br /> 
 SMEXv12.44Ti.HEALPix04.E_1143_1171keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5
