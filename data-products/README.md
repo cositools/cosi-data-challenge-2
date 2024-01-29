@@ -35,7 +35,7 @@ The data is hosted on [wasabi](https://console.wasabisys.com/file_manager/cosi-p
 <pre>
 AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2fUwiq4DJoewzIgvTCHoOv aws s3api get-object  --bucket cosi-pipeline-public --key full/path/your_file --endpoint-url=https://s3.us-west-1.wasabisys.com your_file
 </pre>
-Note that you must replace 'full/path/your_file' (after '--key') and 'your_file' (at the end) with the actual path and file. All the needed paths and file names are given below.
+Note that you must replace 'full/path/your_file' (after '--key') and 'your_file' (at the end) with the actual path and file. All the needed paths and file names are given below. The specific files needed for each respective data challenge are given in the **Data Challenges** section on the main page.
 
 **Orientation File:** <br />
 wasabi path and file: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
@@ -88,7 +88,7 @@ total_bg_3months_binned_for_continuum.hdf5 <br />
 wasabi path: COSI-SMEX/DC2/Data/Sources <br />
 
 Sources: <br />
-For DC2 we simulated 30 unique sources, running 49 different simulations in total (using multiple models for some of the sources). The source files needed for each respective data challenge are specified in the **Data Challenges** section on the main page. For reference, they are also listed below.
+For DC2 we simulated 30 unique sources, running 49 different simulations in total (using multiple models for some of the sources). 
 
 Unbinned Files: <br />
 GRB101216721_unbinned_data.fits.gz <br />
