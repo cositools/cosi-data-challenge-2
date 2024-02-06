@@ -345,7 +345,8 @@ These challenges will require using the tools already available in cosipy to dev
 1) Develop method for calculating light curves.
 2) Develop method for calculating SEDs.
 3) Example notebook demonstrating simultaneous fit of multiple point sources.
-4) Develop source injector. 
+4) Develop source injector.
+5) Test construction of TS map with multiple sources (of varying relative intensities). 
 
 ### Advanced
 These challenges will require developing new fundamental tools, which should fit into the cosipy framework.
