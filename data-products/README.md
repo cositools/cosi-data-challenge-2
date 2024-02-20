@@ -37,6 +37,14 @@ AWS_ACCESS_KEY_ID=GBAL6XATQZNRV3GFH9Y4 AWS_SECRET_ACCESS_KEY=GToOczY5hGX3sketNO2
 </pre>
 Note that you must replace 'full/path/your_file' (after '--key') and 'your_file' (at the end) with the actual path and file. All the needed paths and file names are given below. The specific files needed for each respective data challenge are given in the **Data Challenges** section on the main page.
 
+Alternatively, cosipy has a utility function that can be used for downloading files. The usage is as follows:
+<pre>
+from cosipy.util import fetch_wasabi_file
+  
+fetch_wasabi_file('full/path/wasabi/file')
+</pre>
+Note that an error will be thrown if the file already exists. To overwrite the existing file, the keyword ``override=True`` can be passed.   
+
 **Orientation File:** <br />
 wasabi path and file: COSI-SMEX/DC2/Data/Orientation/20280301_3_month.ori <br />
 
