@@ -356,3 +356,5 @@ These challenges will require developing new fundamental tools, which should fit
 4) Implement GPU computing.
 5) Minimize memory usage. 
 
+## Known Caveats 
+1) As can be seen in the spectral fit tutorials, we are not able to perfectly recover the input models (e.g. the Crab spectrum), even though we are using an ideal background. We think that this may be due to the fact that our response uses a coarse pixelation. Another possibility is that it may be related to a poorly characterized response for high off-axis angles. This is something that still needs to be tested further.
