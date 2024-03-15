@@ -86,6 +86,8 @@ Although this might look more complicated, the mechanics are exactly the same as
 
 <img src="figures/cds_psichi_slices.png" alt="" width="500"/>
 
+For simplicity, we have simply assumed that the spacecraft is fixed in an inertial reference frame –galactic coordinates, in this case. In reality, the spacecraft is always moving, and the response of the instrument –a function of the local spacecraft coordinates– needs to be convolved with the orientation history of the spacecraft. Alternatively, the data can be binned in time, with small enough bins such that the spacecraft can be considered static within the bin. Furthermore, we can collect multiple time bins where the spacecraft had the same orientation into "spacecraft attitude bins" –a.k.a. scatt bins. More details are explained [here](https://github.com/cositools/cosipy/tree/main/docs/tutorials/response/SpacecraftFile.ipynb).
+
 ## The cosipy modules, inputs and outputs
 
 In cosipy, different modules are combined to perform the implementation of the likelihood computation described above.
