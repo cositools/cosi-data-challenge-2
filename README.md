@@ -144,7 +144,6 @@ and can we do a profile likelihood with different 3D models to recover the input
 The tools needed to complete these challenges are demonstrated in the [Crab spectral fit](https://github.com/cositools/cosipy/tree/main/docs/tutorials/spectral_fits/continuum_fit/crab) and [GRB localization](https://github.com/cositools/cosipy/tree/main/docs/tutorials/ts_map) notebooks.
 
 **Data Files:** <br /> 
-SMEXv12.44Ti.HEALPix04.E_1143_1171keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5
 SMEXv12.44Ti.HEALPix04.E_1150_1164keV.binnedimaging.imagingresponse.nonsparse_nside16.area.h5
 psr_gal_Ti44_E_1143_1171keV_DC2.h5 <br />
 psr_gal_Ti44_E_1150_1164keV_DC2.h5 <br />
