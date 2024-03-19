@@ -86,6 +86,8 @@ Although this might look more complicated, the mechanics are exactly the same as
 
 <img src="figures/cds_psichi_slices.png" alt="" width="500"/>
 
+For simplicity, we have simply assumed that the spacecraft is fixed in an inertial reference frame –galactic coordinates, in this case. In reality, the spacecraft is always moving, and the response of the instrument –a function of the local spacecraft coordinates– needs to be convolved with the orientation history of the spacecraft. Alternatively, the data can be binned in time, with small enough bins such that the spacecraft can be considered static within the bin. Furthermore, we can collect multiple time bins where the spacecraft had the same orientation into "spacecraft attitude bins" –a.k.a. scatt bins. More details are explained [here](https://github.com/cositools/cosipy/tree/main/docs/tutorials/response/SpacecraftFile.ipynb).
+
 ## The cosipy modules, inputs and outputs
 
 In cosipy, different modules are combined to perform the implementation of the likelihood computation described above.
@@ -117,7 +119,9 @@ Internally, all modules handle the data using the objects:
 
 The Multi-Mission Maximum Likelihood framework ([3ML](https://threeml.readthedocs.io/en/stable/)) is a common interface to perform a likelihood-based analysis across multiple instruments. Since all instruments observe the same source, their likelihoods for a common source model can be simply multiplied to obtain the global likelihood:
 
-$$\mathcal{L}_{}(\mathrm{model}) = \mathcal{L}_{\mathrm{NuSTAR}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{GBM}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{COSI}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{LAT}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{HAWC}}(\mathrm{model})\ldots$$
+```math
+\mathcal{L}_{}(\mathrm{model}) = \mathcal{L}_{\mathrm{NuSTAR}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{GBM}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{COSI}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{LAT}}(\mathrm{model}) \cdot \mathcal{L}_{\mathrm{HAWC}}(\mathrm{model})\ldots
+```
 
 All 3ML needs is a plugin for each instrument that accepts a common model in a predetermined format ([astromodels](https://astromodels.readthedocs.io/en/latest/)), convolves it with its particular instrument response, and returns a likelihood. This is precisely what COSILike does.
 
@@ -127,7 +131,7 @@ Once you have a global likelihood function, the analysis machinery is the same w
 
 The first COSI data challenge release used the analysis software developed by Thomas Siegert, now called "cosipy-classic". While the analysis is very similar between cosipy and cosipy-classic, the new cosipy brings several improvements:
 
-- Increase in sensitivity, since the analysis is always performed in $\left\{E', \phi, l', b'\right\}￼$, not projected into ￼$\left\{E'\right\}￼$ (for the spectral analysis) and $\left\{E', \phi, l', b'\right\}￼$ (for imaging)
+- Increase in sensitivity, since the analysis is always performed in $\left\lbrace E', \phi, l', b'\right\rbrace￼$, not projected into ￼$\left\lbrace E'\right\rbrace￼$ (for the spectral analysis) and $\left\lbrace E', \phi, l', b'\right\rbrace￼$ (for imaging)
 - 3ML integration
 - The response and data are easier to visualize and manipulate, thanks to using:
     - mhealpy
