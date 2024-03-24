@@ -145,13 +145,39 @@ The first COSI data challenge release used the analysis software developed by Th
 
 ## Next steps
 
-Cosipy is under active development, in preparation for the COSI launch scheduled in 2027. Some of the following steps are:
+The cosipy library is under active development in preparation for the COSI launch scheduled in 2027. There are currently 50 open issues and/or desired features as of today!
 
-- Clean things up a little more: improve the documentation, standardize the API across all modules, and develop unit tests until we have full coverage
-- Develop the polarization analysis. The detector response needs a new axis: the photon polarization angle
-- The scalability issue. Currently, we have a coarse detector response and no polarization, and the code is still relatively slow. This will not be sustainable when we use a binning appropriate for COSI. Some options are:
-    - Further code optimization. We haven't spent a lot of time on this, there might still be low-hanging fruits.
-    - Decouple the response matrix from data binning. Although currently we explicitly do a direct matrix multiplication, we can _effectively_ perform this same operation in clever ways. (Note from Israel: an unbinned analysis is an option!)
-- Any of the 46 open issues and/or desired features as of today!
+The next steps for cosipy can be classified into three categories:
+
+### Adding new features
+
+While COSI will be capable of measuring polarization, polarization analysis was not included in Data Challenge 2. It will be part of Data Challenge 3.
+
+Various improvements to the imaging algorithm are underway. The cosipy version at launch will contain various imaging algorithm approaches.
+
+We are also developing a source injector starting from the detector response, as opposed to starting always from MEGAlib event-by-event simulations. This will simplify sensitivity calculations and theoretical predictions.
+
+### Optimization and scalability
+
+Currently, we have a coarse detector response and no polarization, and the code is still relatively slow. This will not be sustainable when we use a binning appropriate for COSI's capabilities. 
+
+Some options are:
+
+- Further code optimization. We haven't profiled the code exhaustively, it's likely that there are still low-hanging fruits.
+- Decouple the response matrix from data binning. Although currently we explicitly do a direct matrix multiplication, we can _effectively_ perform this same operation in clever ways. We are exploring various ways to perform the response interpolation, including:
+
+    - Using machine learning techniques
+    - Exploiting the approximate symmetries
+    - Reparametrizations of the response.
+- We are developing an unbinned analysis, which might speed up some analyses --e.g. GRBs.
+
+### Improving the code usability and maintenance
+
+These tasks include:
+
+- Improve parts of the documentation that might not be clear.
+- Add unit tests until we have full coverage, and run these tests automatically with each pull request
+- Standardize the API and coding style across all modules
+- Develop yaml-configurable analysis scripts.
 
 
