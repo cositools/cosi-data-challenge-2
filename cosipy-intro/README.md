@@ -157,6 +157,8 @@ Various improvements to the imaging algorithm are underway. The cosipy version a
 
 We are also developing a source injector starting from the detector response, as opposed to starting always from MEGAlib event-by-event simulations. This will simplify sensitivity calculations and theoretical predictions.
 
+On Data Challenge 2 we assumed we knew the shape of the background distribution. While the background normalization is a free parameter, we use the same distribution of background counts --in measured energy and the Compton Data Space-- as the simulated data. For real data, although we can simulate the background, we will not know a priori exactly what the background distribution is, and therefore it needs to be estimated. We are working on background estimation techniques for the next release.
+
 ### Optimization and scalability
 
 Currently, we have a coarse detector response and no polarization, and the code is still relatively slow. This will not be sustainable when we use a binning appropriate for COSI's capabilities. 
