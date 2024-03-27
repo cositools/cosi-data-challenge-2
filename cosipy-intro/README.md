@@ -131,7 +131,7 @@ Once you have a global likelihood function, the analysis machinery is the same w
 
 The first COSI data challenge release used the analysis software developed by Thomas Siegert, now called "cosipy-classic". While the analysis is very similar between cosipy and cosipy-classic, the new cosipy brings several improvements:
 
-- Increase in sensitivity, since the analysis is always performed in $\left\lbrace E', \phi, l', b'\right\rbrace￼$, not projected into ￼$\left\lbrace E'\right\rbrace￼$ (for the spectral analysis) and $\left\lbrace E', \phi, l', b'\right\rbrace￼$ (for imaging)
+- Increase in sensitivity, since the analysis is always performed in $\left\lbrace E', \phi, l', b' \right\rbrace￼$, not projected into $\left\lbrace E' \right\rbrace$ (for the spectral analysis) and $\left\lbrace E', \phi, l', b' \right\rbrace$ (for imaging)
 - 3ML integration
 - The response and data are easier to visualize and manipulate, thanks to using:
     - mhealpy
